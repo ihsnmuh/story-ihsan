@@ -1,46 +1,74 @@
-import { Button, IconButton } from '@mui/material';
-import { GitHub, Download, LinkedIn, Instagram } from '@mui/icons-material';
-import Link from 'next/link';
+import { Download, GitHub, Instagram, LinkedIn } from '@mui/icons-material';
+import { Button } from '@mui/material';
 import { SocialMedia } from '../../Atoms/socialMedia';
 
 export default function Header() {
   return (
-    <div className='min-h-screen bg-gray-200 p-10 lg:p-20'>
-      <div className='space-y-10 lg:space-y-0 lg:space-x-10 lg:space-x-10 lg:grid lg:grid-cols-2'>
-        <div className='text-gray-500 space-y-5 md:space-y-10 text-center lg:text-left md:flex md:flex-col md:justify-center'>
-          <h2 className='text-black text-4xl md:text-5xl lg:text-6xl font-bold'>
-            {'<Hello World! />👋'}
-          </h2>
-          <p className='text-xl md:text-2xl lg:text-3xl text-gray-900'>
-            I’m <b>Ihsan</b>, a <b>Frontend Developer</b> and{' '}
-            <b>UI / UX Designer</b>, Base On <b>Jakarta</b>
+    <div className='min-h-screen bg-gray-200 dark:bg-gray-600 p-12 lg:p-40'>
+      <div className='max-w-6xl space-y-10 lg:space-y-0 lg:space-x-10 flex flex-col-reverse lg:space-x-10 lg:flex lg:flex-row'>
+        <div className='space-y-5 md:space-y-10 text-center lg:text-left md:flex md:flex-col md:justify-center lg:flex-1'>
+          <h1 className='text-4xl md:text-5xl lg:text-5xl font-bold text-blue-500 dark:text-yellow-400'>
+            {'<Hello World! />'}👋
+          </h1>
+          <p className='text-xl md:text-2xl lg:text-3xl text-gray-900 dark:text-white'>
+            I’m{' '}
+            <span className='font-bold text-blue-500 dark:text-yellow-400'>
+              Ihsan
+            </span>
+            , a{' '}
+            <span className='font-bold text-blue-500 dark:text-yellow-400'>
+              Frontend Developer
+            </span>{' '}
+            and{' '}
+            <span className='font-bold text-blue-500 dark:text-yellow-400'>
+              UI / UX Designer
+            </span>
+            , Based in{' '}
+            <span className='font-bold text-blue-500 dark:text-yellow-400'>
+              Jakarta
+            </span>
           </p>
           <div>
-            <Button variant='contained' startIcon={<Download />}>
+            <Button
+              className='bg-blue-500 dark:bg-yellow-400 dark:hover:bg-yellow-500'
+              variant='contained'
+              startIcon={<Download />}
+            >
               Download Resume
             </Button>
           </div>
-          <div className='divide-blue-500 divide-x'>
+          <div className='divide-blue-500 divide-x dark:divide-white'>
             <SocialMedia
-              icon={<LinkedIn />}
+              icon={
+                <LinkedIn className='fill-current text-blue-500 dark:text-white hover:text-blue-600 dark:hover:text-yellow-500' />
+              }
               socialMedia='LinkedIn'
               link='https://www.linkedin.com/in/ihsanmuhammad19'
             />
             <SocialMedia
-              icon={<GitHub />}
+              icon={
+                <GitHub className='fill-current text-blue-500 dark:text-white hover:text-blue-600 dark:hover:text-yellow-500' />
+              }
               socialMedia='GitHub'
               link='https://github.com/ihsnmuh'
             />
             <SocialMedia
-              icon={<Instagram />}
+              icon={
+                <Instagram className='fill-current text-blue-500 dark:text-white hover:text-blue-600 dark:hover:text-yellow-500' />
+              }
               socialMedia='Instagram'
               link='https://instagram.com/ihsnmuh'
             />
           </div>
         </div>
-        <div className=''>
-          <div className='w-full h-64 rounded-lg shadow-2xl bg-black'>
-            Halow
+        <div className='relative lg:flex-1'>
+          <div className='relative w-full h-full flex justify-center lg:justify-end content-center items-center mb-10 md:mb-10'>
+            <div className='relative shadow-lg h-64 w-64 lg:h-96 lg:w-96 rounded-full bg-transparent border-8 p-2 border-blue-500 dark:border-yellow-400 flex items-center justify-center'>
+              <img
+                src='/image/avatar.png'
+                className='absolute h-5/6 w-5/6 lg:h-5/6 lg:w-5/6 rounded-full'
+              />
+            </div>
           </div>
         </div>
       </div>
