@@ -72,8 +72,8 @@ export default function Navbar() {
           {/* Primary Navbar */}
           <div>
             <ul className='md:flex items-center space-x-1 hidden'>
-              {navbars.map((navbar) => (
-                <li>
+              {navbars.map((navbar, idx) => (
+                <li key={idx}>
                   <Link href={navbar.link}>
                     <a
                       className={
@@ -104,10 +104,10 @@ export default function Navbar() {
         </div>
       </div>
       {/* Mobile navbar */}
-      <div className={isOpenNavbar ? 'md:hidden' : 'hidden md:hidden'}>
+      <div className={isOpenNavbar ? 'md:hidden' : 'hidden md:hidden '}>
         <ul>
-          {navbars.map((navbar) => (
-            <li>
+          {navbars.map((navbar, idx) => (
+            <li key={idx}>
               <Link href={navbar.link}>
                 <a
                   className={
