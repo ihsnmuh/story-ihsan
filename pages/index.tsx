@@ -3,6 +3,7 @@ import Header from '../components/Organism/Header';
 import Head from 'next/head';
 import Summary from '../components/Organism/Summary';
 import Hope from '../components/Organism/Hope';
+import SkillSet from '../components/Organism/SkillSet';
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <Header />
       <Summary />
       <Hope />
+      <SkillSet />
     </>
   );
 };

@@ -1,0 +1,28 @@
+import Dotes from '../../Atoms/dotes';
+import CardSkillSet from '../../Molecules/CardSkillSet';
+import { CardStacks } from './DataSkill';
+
+export default function SkillSet() {
+  return (
+    <div className='flex flex-col justify-center content-center text-center p-6'>
+      <Dotes />
+      <div className='text-3xl font-bold p-5'>{'<Skillsets/>'}</div>
+      <div>
+        <p className='lg:text-2xl mb-8'>
+          A variety of frameworks, libraries and languages that I have had the
+          oppurtunity to work with.
+        </p>
+      </div>
+      <div className='flex flex-col md:flex-row md:justify-around '>
+        {CardStacks.map((CardStack, idx) => (
+          <div key={idx} className='p-6'>
+            <CardSkillSet
+              category={CardStack.category}
+              stacks={CardStack.stacks}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
