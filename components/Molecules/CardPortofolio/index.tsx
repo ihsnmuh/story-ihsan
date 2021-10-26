@@ -1,6 +1,5 @@
 import { GitHub, Public } from '@mui/icons-material';
 import {
-  Avatar,
   Card,
   CardActions,
   CardContent,
@@ -27,7 +26,7 @@ export default function CardPortofolio(props: CardPortofolioProps) {
 
   return (
     <div className='flex w-full p-6 justify-center'>
-      <Card className='w-full h-full dark:bg-gray-400'>
+      <Card className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 w-full h-full bg-gray-100 dark:bg-gray-400'>
         <CardMedia
           component='img'
           height='140'
@@ -55,24 +54,25 @@ export default function CardPortofolio(props: CardPortofolioProps) {
           >
             {description}
           </Typography>
-          <div className='py-2 flex flex-wrap'>
-            {stacks.map((stack) => (
+          <Typography component='div' className='py-2 flex flex-wrap'>
+            {stacks.map((stack, idx) => (
               <Chip
+                key={idx}
                 label={stack}
                 size='small'
                 variant='filled'
                 color='info'
-                className='m-1 bg-yellow-400 dark:bg-gray-500'
+                className='m-1 bg-yellow-500 dark:bg-gray-500'
               />
             ))}
-          </div>
+          </Typography>
         </CardContent>
-        <CardActions className='bg-gray-100 dark:bg-gray-600 flex content-end'>
+        <CardActions>
           <Link href={githubLink}>
             <a target='_blank'>
               <IconButton
                 aria-label='github'
-                className='bg-black hover:bg-gray-600 text-white'
+                className='text-white bg-gray-800 hover:bg-gray-900'
                 hidden={githubLink === ''}
               >
                 <GitHub />
@@ -83,7 +83,7 @@ export default function CardPortofolio(props: CardPortofolioProps) {
             <a target='_blank'>
               <IconButton
                 aria-label='website'
-                className='bg-blue-600 hover:bg-blue-500 text-white'
+                className='text-white bg-blue-500 hover:bg-blue-600 '
                 hidden={webLink === ''}
               >
                 <Public />

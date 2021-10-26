@@ -1,6 +1,7 @@
 import { Download, GitHub, Instagram, LinkedIn } from '@mui/icons-material';
 import { Button } from '@mui/material';
 import { SocialMedia } from '../../Atoms/socialMedia';
+import Typewriter from 'typewriter-effect';
 
 export default function Header() {
   return (
@@ -11,7 +12,15 @@ export default function Header() {
             👋
           </span>
           <h1 className='space-y-1 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-blue-500 dark:text-yellow-400'>
-            {'<Hello World! />'}
+            {
+              <Typewriter
+                options={{
+                  strings: ['Hello World!', 'Selamat Datang!', 'Salam Kenal!'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            }
           </h1>
           <p className='text-xl md:text-2xl lg:text-3xl text-gray-900 dark:text-white'>
             I’m{' '}
@@ -22,7 +31,7 @@ export default function Header() {
             <span className='font-bold text-blue-500 dark:text-yellow-400'>
               Frontend Developer
             </span>{' '}
-            and{' '}
+            and interest in{' '}
             <span className='font-bold text-blue-500 dark:text-yellow-400'>
               UI / UX Designer
             </span>
@@ -33,7 +42,7 @@ export default function Header() {
           </p>
           <div>
             <Button
-              className='bg-blue-500 dark:bg-yellow-400 dark:hover:bg-yellow-500'
+              className='animate-bounce transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 bg-blue-500 dark:bg-yellow-400 dark:hover:bg-yellow-500'
               variant='contained'
               startIcon={<Download />}
             >
@@ -66,7 +75,7 @@ export default function Header() {
         </div>
         <div className='relative lg:flex-1'>
           <div className='relative w-full h-full flex justify-center lg:justify-end content-center items-center mb-10 md:mb-10'>
-            <div className='relative shadow-lg h-64 w-64 lg:h-96 lg:w-96 rounded-full bg-transparent border-8 p-2 border-blue-500 dark:border-yellow-400 flex items-center justify-center'>
+            <div className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 relative shadow-lg h-64 w-64 lg:h-96 lg:w-96 rounded-full bg-transparent border-8 p-2 border-blue-500 dark:border-yellow-400 flex items-center justify-center'>
               <img
                 src='/image/avatar.png'
                 className='absolute h-5/6 w-5/6 lg:h-5/6 lg:w-5/6 rounded-full bg-gradient-to-r from-green-400 to-blue-500 dark:from-pink-500 dark:to-yellow-500'

@@ -20,7 +20,7 @@ export default function Portofolio() {
       </div>
       <div>
         <div>
-          <div className='flex flex-col  md:flex-row md:justify-around'>
+          <div className='flex flex-col justify-center align-middle md:flex-row md:justify-around'>
             <CardPortofolio
               image='personal-website'
               title='Personal Website'
@@ -34,7 +34,7 @@ export default function Portofolio() {
                 'Material UI',
               ]}
               githubLink='https://github.com/ihsnmuh/story-ihsan'
-              webLink='https://google.com'
+              webLink='/'
             />
             <CardPortofolio
               image='dashboard-mmp'
