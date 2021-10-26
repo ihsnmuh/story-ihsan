@@ -2,7 +2,7 @@ import Dotes from '../../Atoms/dotes';
 
 export default function Summary() {
   return (
-    <div className='flex flex-col justify-center text-center h-5/6 p-10 lg:px-40 lg:py-20'>
+    <div className='flex flex-col justify-center text-center h-5/6 p-6 lg:px-40 lg:py-20'>
       <Dotes />
       <div className='text-3xl font-bold p-5'>{'<San is/>'}</div>
       <div>

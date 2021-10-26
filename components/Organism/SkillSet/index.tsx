@@ -4,7 +4,7 @@ import { CardStacks } from './DataSkill';
 
 export default function SkillSet() {
   return (
-    <div className='flex flex-col justify-center content-center text-center p-6'>
+    <div className='flex flex-col justify-center content-center text-center p-6 lg:px-40 lg:py-20 bg-blue-100 dark:bg-gray-600'>
       <Dotes />
       <div className='text-3xl font-bold p-5'>{'<Skillsets/>'}</div>
       <div>
@@ -13,7 +13,7 @@ export default function SkillSet() {
           oppurtunity to work with.
         </p>
       </div>
-      <div className='flex flex-col md:flex-row md:justify-around '>
+      <div className='flex flex-col md:flex-row md:justify-around'>
         {CardStacks.map((CardStack, idx) => (
           <div key={idx} className='p-6'>
             <CardSkillSet

@@ -99,6 +99,10 @@ export const CardStacks = [
         name: 'Tailwind',
         icon: 'tailwind.svg',
       },
+      {
+        name: 'Firebase',
+        icon: 'firebase.svg',
+      },
     ],
   },
   {

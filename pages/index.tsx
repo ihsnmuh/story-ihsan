@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Summary from '../components/Organism/Summary';
 import Hope from '../components/Organism/Hope';
 import SkillSet from '../components/Organism/SkillSet';
+import Portofolio from '../components/Organism/Portofolio';
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       <Summary />
       <Hope />
       <SkillSet />
+      <Portofolio />
     </>
   );
 };
