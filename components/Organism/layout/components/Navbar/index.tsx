@@ -104,7 +104,9 @@ export default function Navbar() {
         </div>
       </div>
       {/* Mobile navbar */}
-      <div className={isOpenNavbar ? 'md:hidden' : 'hidden md:hidden '}>
+      <div
+        className={isOpenNavbar ? 'md:hidden bg-gray-100' : 'hidden md:hidden'}
+      >
         <ul>
           {navbars.map((navbar, idx) => (
             <li key={idx}>

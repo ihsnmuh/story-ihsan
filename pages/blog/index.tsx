@@ -1,7 +1,13 @@
+import Head from 'next/head';
+import BlogComponet from '../../components/Organism/Blog';
+
 export default function BlogPage() {
   return (
     <div>
-      <h1>Blog</h1>
+      <Head>
+        <title>Blog | Muhammad Ihsan</title>
+      </Head>
+      <BlogComponet />
     </div>
   );
 }

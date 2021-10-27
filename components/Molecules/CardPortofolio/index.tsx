@@ -26,12 +26,14 @@ export default function CardPortofolio(props: CardPortofolioProps) {
 
   return (
     <div className='flex w-full p-6 justify-center'>
-      <Card className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 w-full h-full bg-gray-100 dark:bg-gray-400'>
+      <Card className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 w-full h-full bg-gray-100 dark:bg-gray-400'>
         <CardMedia
           component='img'
-          height='140'
+          height={300}
+          width='full'
           image={`/image/${image}.png`}
           alt={image}
+          className='bg-contain bg-center'
         />
         <CardContent>
           <Typography

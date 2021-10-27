@@ -1,6 +1,6 @@
-import Dotes from '../../Atoms/dotes';
+import Dotes from '../../../Atoms/dotes';
 
-export default function Summary() {
+export default function SummarySection() {
   return (
     <div className='flex flex-col justify-center text-center h-5/6 p-6 lg:px-40 lg:py-20'>
       <Dotes />

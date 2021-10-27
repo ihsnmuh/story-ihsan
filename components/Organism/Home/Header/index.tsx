@@ -1,15 +1,15 @@
 import { Download, GitHub, Instagram, LinkedIn } from '@mui/icons-material';
 import { Button } from '@mui/material';
-import { SocialMedia } from '../../Atoms/socialMedia';
+import { SocialMedia } from '../../../Atoms/socialMedia';
 import Typewriter from 'typewriter-effect';
 
-export default function Header() {
+export default function HeaderSection() {
   return (
     <div className='min-h-5/6 bg-blue-100 dark:bg-gray-600 p-12 lg:px-40'>
       <div className='max-w-6xl space-y-10 lg:space-y-0 lg:space-x-10 flex flex-col-reverse lg:space-x-10 lg:flex lg:flex-row'>
         <div className='space-y-5 md:space-y-10 text-center lg:text-left md:flex md:flex-col md:justify-center lg:flex-1'>
           <span className='text-4xl md:text-5xl lg:text-5xl xl:text-6xl'>
-            👋
+            <div className='animate-wiggle'>👋</div>
           </span>
           <h1 className='space-y-1 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-blue-500 dark:text-yellow-400'>
             {
@@ -42,7 +42,7 @@ export default function Header() {
           </p>
           <div>
             <Button
-              className='animate-bounce transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 bg-blue-500 dark:bg-yellow-400 dark:hover:bg-yellow-500'
+              className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 bg-blue-500 dark:bg-yellow-400 dark:hover:bg-yellow-500'
               variant='contained'
               startIcon={<Download />}
             >

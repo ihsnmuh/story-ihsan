@@ -1,8 +1,8 @@
-import Dotes from '../../Atoms/dotes';
-import CardSkillSet from '../../Molecules/CardSkillSet';
+import Dotes from '../../../Atoms/dotes';
+import CardSkillSet from '../../../Molecules/CardSkillSet';
 import { CardStacks } from './DataSkill';
 
-export default function SkillSet() {
+export default function SkillSetSection() {
   return (
     <div className='flex flex-col justify-center content-center text-center p-6 lg:px-40 lg:py-20 bg-blue-100 dark:bg-gray-600'>
       <Dotes />

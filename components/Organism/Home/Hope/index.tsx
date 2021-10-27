@@ -1,6 +1,6 @@
-import CardHope from '../../Molecules/CardHope';
+import CardHope from '../../../Molecules/CardHope';
 
-export default function Hope() {
+export default function HopeSection() {
   return (
     <div className='flex justify-center content-center text-center p-6 lg:px-40 lg:py-20'>
       <div className='flex flex-col md:flex-row justify-center'>
