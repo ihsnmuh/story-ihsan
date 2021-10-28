@@ -1,10 +1,10 @@
 import React from 'react';
 import HeaderPhoto from '../General/HeaderPhoto';
 
-export default function ContactComponent() {
+export default function AboutComponent() {
   return (
     <>
-      <HeaderPhoto title='Contact' subTitle='Coming Soon' />
+      <HeaderPhoto title='About' subTitle='Coming Soon' />
     </>
   );
 }

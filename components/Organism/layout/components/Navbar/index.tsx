@@ -48,7 +48,7 @@ export default function Navbar() {
     { name: 'Home', link: '/' },
     { name: 'Portofolio', link: '/portofolio' },
     { name: 'Blog', link: '/blog' },
-    { name: 'Contact', link: '/contact' },
+    { name: 'About', link: '/about' },
   ];
 
   return (

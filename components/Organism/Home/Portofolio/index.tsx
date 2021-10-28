@@ -4,6 +4,7 @@ import { useRouter } from 'next/dist/client/router';
 import React from 'react';
 import Dotes from '../../../Atoms/dotes';
 import CardPortofolio from '../../../Molecules/CardPortofolio';
+import { DataPortofolio } from './portofolioData';
 
 export default function PortofolioSection() {
   const router = useRouter();
@@ -21,53 +22,19 @@ export default function PortofolioSection() {
       <div>
         <div>
           <div className='flex flex-col justify-center align-middle md:flex-row md:justify-around'>
-            <CardPortofolio
-              image='personal-website'
-              title='Personal Website'
-              category='Personal Project'
-              description='A personal website that explains how I love the world of frontend developer'
-              stacks={[
-                'Typescript',
-                'Next Js',
-                'React Js',
-                'Tailwind',
-                'Material UI',
-              ]}
-              githubLink='https://github.com/ihsnmuh/story-ihsan'
-              webLink='/'
-            />
-            <CardPortofolio
-              image='dashboard-mmp'
-              title='Matamata Politik Dashboard'
-              category='Internal Project'
-              description='This project was created to manage the news on the matamatapolitik.com website'
-              stacks={[
-                'Typescript',
-                'Next Js',
-                'React Js',
-                'Material UI',
-                'gRPC',
-              ]}
-              githubLink=''
-              webLink='https://www.matamatapolitik.com'
-            />
-            <CardPortofolio
-              image='qurantara'
-              title='Qurantara'
-              category='Personal Project'
-              description='This website functions as a medium for reading and listening to the Quran, reading hadith, and also viewing prayer schedules based on regions'
-              stacks={[
-                'Javascript',
-                'Vue Js',
-                'Bootstrap',
-                'Heroku',
-                'Firebase',
-                'Express Js',
-                'Postgresql',
-              ]}
-              githubLink='https://github.com/ihsnmuh/qurantara-client'
-              webLink='https://qurantara-30c57.web.app/'
-            />
+            {DataPortofolio &&
+              DataPortofolio.map((data, idx) => (
+                <CardPortofolio
+                  key={idx}
+                  image={data.image}
+                  title={data.title}
+                  category={data.category}
+                  description={data.description}
+                  stacks={data.stacks}
+                  githubLink={data.githubLink}
+                  webLink={data.webLink}
+                />
+              ))}
           </div>
           <div className='flex justify-center'>
             <Button

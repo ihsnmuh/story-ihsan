@@ -2,12 +2,23 @@ export const DataPortofolio = [
   {
     image: 'personal-website',
     title: 'Personal Website',
-    category: 'Personal Project',
+    category: 'Personal Challenge',
     description:
       'A personal website that explains how I love the world of frontend developer',
     stacks: ['Typescript', 'Next Js', 'React Js', 'Tailwind', 'Material UI'],
     githubLink: 'https://github.com/ihsnmuh/story-ihsan',
     webLink: '/',
+  },
+  {
+    image: 'krealogi-case',
+    title: 'Krealogi: UI/UX Challenge',
+    category: 'UX/UI Challenge',
+    description:
+      'This project describes the features of marketplace and logistics integration.',
+    stacks: ['Figma', 'UI', 'UX Case Study'],
+    githubLink: '',
+    webLink:
+      'https://ihsnmuh.medium.com/integrasi-logistik-expedisi-marketplace-pada-aplikasi-krealogi-ux-case-study-b52f5f9b4563',
   },
   {
     image: 'dashboard-mmp',
@@ -22,7 +33,7 @@ export const DataPortofolio = [
   {
     image: 'qurantara',
     title: 'Qurantara',
-    category: 'Personal Project',
+    category: 'Personal Challenge',
     description:
       'This website functions as a medium for reading and listening to the Quran, reading hadith, and also viewing prayer schedules based on regions',
     stacks: [
@@ -40,7 +51,7 @@ export const DataPortofolio = [
   {
     image: 'sugoku',
     title: 'Sugoku Mobile App',
-    category: 'Personal Project',
+    category: 'Personal Challenge',
     description:
       'Sugoku Mobile App is An interactive mobile game to play sudoku with 3 level difficulties',
     stacks: ['Javascript', 'Expo', 'React Native'],
@@ -50,7 +61,7 @@ export const DataPortofolio = [
   {
     image: 'ecommerce-wannabe',
     title: 'E-Commerce Wannabe',
-    category: 'Personal Project',
+    category: 'Personal Challenge',
     description:
       'Like Web e-commerce in general, you can order some gadget and add to the cart, but this is very simple',
     stacks: [
@@ -67,18 +78,9 @@ export const DataPortofolio = [
     webLink: 'https://ecommerce-client-mu.web.app/',
   },
   {
-    image: 'nonton-movies',
-    title: 'Nonton Movies',
-    category: 'Personal Project',
-    description: 'Movie Web is a website to search popular Movie and Tv Series',
-    stacks: ['Javascript', 'Firebase', 'React', 'Bootstrap'],
-    githubLink: '',
-    webLink: 'https://nonton-moviesme.web.app/',
-  },
-  {
     image: 'kanban-mu',
     title: 'Kanban Mu',
-    category: 'Personal Project',
+    category: 'Personal Challenge',
     description:
       'Kanban mu is an application to managing tasks with many users',
     stacks: [
@@ -99,7 +101,7 @@ export const DataPortofolio = [
   {
     image: 'fancy-todo',
     title: 'Fancy Todo',
-    category: 'Personal Project',
+    category: 'Personal Challenge',
     description:
       'Fancy Todo is an application for managing your to-do list with other users.',
     stacks: [
@@ -118,9 +120,19 @@ export const DataPortofolio = [
     webLink: 'https://fancy-todosmu.web.app/',
   },
   {
+    image: 'nonton-movies',
+    title: 'Nonton Movies',
+    category: 'Personal Challenge',
+    description: 'Movie Web is a website to search popular Movie and Tv Series',
+    stacks: ['Javascript', 'Firebase', 'React', 'Bootstrap'],
+    githubLink: '',
+    webLink: 'https://nonton-moviesme.web.app/',
+  },
+
+  {
     image: 'entertain-me',
     title: 'Entertain Me',
-    category: 'Personal Project',
+    category: 'Personal Challenge',
     description:
       'EntertainMe is a mobile app for managing data movie and series',
     stacks: [

@@ -1,4 +1,5 @@
 import React from 'react';
+import Feedback from '../General/Feedback';
 import HeaderSection from './Header';
 import HopeSection from './Hope';
 import PortofolioSection from './Portofolio';
@@ -13,6 +14,7 @@ export default function HomeComponent() {
       <HopeSection />
       <SkillSetSection />
       <PortofolioSection />
+      <Feedback />
     </>
   );
 }
