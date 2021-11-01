@@ -11,14 +11,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider attribute='class'>
       <SnackbarProvider maxSnack={3}>
         <Layout>
-          <Head>
-            <title>Muhammad Ihsan</title>
-            <link rel='icon' href='/icon/ihsan-logo.svg' />
-            <meta
-              name='viewport'
-              content='initial-scale=1.0, width=device-width'
-            />
-          </Head>
           <Component {...pageProps} />
         </Layout>
       </SnackbarProvider>
