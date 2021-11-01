@@ -15,10 +15,36 @@ const Home: NextPage = () => {
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta
           name='description'
-          content='Personal blog Muhammad Ihsan created with love'
+          content="Muhammad Ihsan's personal website made with love"
         />
         <meta name='publisher' content='Muhammad Ihsan' />
         <meta name='author' content='Muhammad Ihsan' />
+        <link rel='canonical' href='https://ihsanmuh.vercel.app/' />
+
+        <meta property='og:locale' content='id_ID' />
+        <meta property='og:title' content='Personal Website | Muhammad Ihsan' />
+        <meta
+          property='og:description'
+          content="Muhammad Ihsan's personal website made with love"
+        />
+        <meta property='og:image' content='/icon/ihsan-logo.svg' />
+        <meta property='og:image:secure_url' content='/icon/ihsan-logo.svg' />
+        <meta property='og:url' content='https://ihsanmuh.vercel.app/' />
+        <meta property='og:site_name' content='Muhammad Ihsan' />
+
+        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:site' content='@ihcaann' />
+        <meta name='twitter:url' content='https://ihsanmuh.vercel.app/' />
+        <meta
+          name='twitter:title'
+          content='Personal Website | Muhammad Ihsan'
+        />
+        <meta name='twitter:image' content='/icon/ihsan-logo.svg' />
+        <meta name='twitter:creator' content='@ihcaann' />
+        <meta
+          name='twitter:description'
+          content="Muhammad Ihsan's personal website made with love"
+        />
       </Head>
       <HomeComponent />
     </>
