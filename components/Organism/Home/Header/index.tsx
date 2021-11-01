@@ -77,7 +77,7 @@ export default function HeaderSection() {
           <div className='relative w-full h-full flex justify-center lg:justify-end content-center items-center mb-10 md:mb-10'>
             <div className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 relative shadow-lg h-64 w-64 lg:h-96 lg:w-96 rounded-full bg-transparent border-8 p-2 border-blue-500 dark:border-yellow-400 flex items-center justify-center'>
               <img
-                src='/image/avatar.png'
+                src='/image/Avatar.png'
                 className='absolute h-5/6 w-5/6 lg:h-5/6 lg:w-5/6 rounded-full bg-gradient-to-r from-green-400 to-blue-500 dark:from-pink-500 dark:to-yellow-500'
               />
             </div>
