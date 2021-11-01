@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "env-cmd -f .env next dev",
-    "build": "env-cmd -f .env next build",
-    "start": "env-cmd -f .env next start",
-    "lint": "env-cmd -f .env next lint"
+    "dev": "env-cmd -f .env.local next dev",
+    "build": "env-cmd -f .env.local next build",
+    "start": "env-cmd -f .env.local next start"
   },
   "dependencies": {
     "@emotion/react": "^11.5.0",

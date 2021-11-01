@@ -21,6 +21,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       email,
       name,
       message,
+      createdAt: new Date().toLocaleString(),
     };
 
     let client;

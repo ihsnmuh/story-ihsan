@@ -26,6 +26,7 @@ export default function Feedback() {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
+  const [loading, setLoading] = useState(false);
 
   async function sendFeedbackHandler(event: { preventDefault: () => void }) {
     event.preventDefault();
@@ -109,7 +110,10 @@ export default function Feedback() {
             required
           />
         </div>
-        <button className='transition duration-300 ease-in-out transform hover:-translate-y-0 hover:scale-105 bg-blue-500 text-white dark:bg-yellow-400 dark:hover:bg-yellow-500 h-12 w-full rounded-md drop-shadow-md'>
+        <button
+          className='transition duration-300 ease-in-out transform hover:-translate-y-0 hover:scale-105 bg-blue-500 text-white dark:bg-yellow-400 dark:hover:bg-yellow-500 h-12 w-full rounded-md drop-shadow-md'
+          disabled
+        >
           Send
         </button>
       </form>
