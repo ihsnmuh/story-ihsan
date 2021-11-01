@@ -2,6 +2,7 @@ import { Download, GitHub, Instagram, LinkedIn } from '@mui/icons-material';
 import { Button } from '@mui/material';
 import { SocialMedia } from '../../../Atoms/socialMedia';
 import Typewriter from 'typewriter-effect';
+import Link from 'next/link';
 
 export default function HeaderSection() {
   return (
@@ -41,13 +42,17 @@ export default function HeaderSection() {
             </span>
           </p>
           <div>
-            <Button
-              className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 bg-blue-500 dark:bg-yellow-400 dark:hover:bg-yellow-500'
-              variant='contained'
-              startIcon={<Download />}
-            >
-              Download Resume
-            </Button>
+            <Link href='https://drive.google.com/file/d/1rkuoBdLaBgRSqUxd4_Gbl6f7YllaT4S5/view?usp=sharing'>
+              <a target='_blank'>
+                <Button
+                  className='bg-blue-500 dark:bg-yellow-400 dark:hover:bg-yellow-500'
+                  variant='contained'
+                  startIcon={<Download />}
+                >
+                  Download Resume
+                </Button>
+              </a>
+            </Link>
           </div>
           <div className='divide-blue-500 divide-x dark:divide-white'>
             <SocialMedia

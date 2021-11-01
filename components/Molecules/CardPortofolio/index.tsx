@@ -25,8 +25,8 @@ export default function CardPortofolio(props: CardPortofolioProps) {
     props;
 
   return (
-    <div className='flex w-full p-6 justify-center'>
-      <Card className='transition duration-500 ease-in-out transform hover:-translate-y-5 hover:scale-110 w-full h-full bg-gray-100 dark:bg-gray-400'>
+    <div className='transition duration-500 ease-in-out transform hover:-translate-y-5 hover:scale-110 flex w-full p-6 justify-center'>
+      <Card className='w-full h-full bg-gray-100 dark:bg-gray-400'>
         <CardMedia
           component='img'
           height={300}
@@ -43,11 +43,9 @@ export default function CardPortofolio(props: CardPortofolioProps) {
             className='font-bold dark:text-white'
           >
             {title}{' '}
-            <Chip
-              label={category}
-              className='bg-red-500 font-bold text-white dark:bg-gray-600'
-              size='small'
-            />
+            <div>
+              <Chip label={category} size='small' color='error' />
+            </div>
           </Typography>
           <Typography
             variant='body2'
@@ -63,8 +61,8 @@ export default function CardPortofolio(props: CardPortofolioProps) {
                 label={stack}
                 size='small'
                 variant='filled'
-                color='info'
-                className='m-1 bg-yellow-500 dark:bg-gray-500'
+                color='warning'
+                className='m-1'
               />
             ))}
           </Typography>
@@ -74,7 +72,7 @@ export default function CardPortofolio(props: CardPortofolioProps) {
             <a target='_blank'>
               <IconButton
                 aria-label='github'
-                className='text-white bg-gray-800 hover:bg-gray-900'
+                color='inherit'
                 hidden={githubLink === ''}
               >
                 <GitHub />
@@ -84,8 +82,8 @@ export default function CardPortofolio(props: CardPortofolioProps) {
           <Link href={webLink}>
             <a target='_blank'>
               <IconButton
+                color='inherit'
                 aria-label='website'
-                className='text-white bg-blue-500 hover:bg-blue-600 '
                 hidden={webLink === ''}
               >
                 <Public />

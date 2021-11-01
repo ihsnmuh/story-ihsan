@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "env-cmd -f .env.local next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "env-cmd -f .env.local next start"
   },
   "dependencies": {
     "@emotion/react": "^11.5.0",

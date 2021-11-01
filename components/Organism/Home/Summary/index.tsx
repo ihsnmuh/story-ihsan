@@ -8,10 +8,10 @@ export default function SummarySection() {
       <div>
         <p className='lg:text-2xl'>
           a non-stop learner, his most effective way to learn things are doing
-          trial and evaluation. He is interested in Fullstack Developer. Small
-          and medium enterprises (UMKM) life taught him to measure what matters
-          and plan things properly. As a person, curiosity is important to
-          improve his life better by learning something new.
+          trial and evaluation. He is interested in becoming a Fullstack
+          Developer. Small and medium enterprises (UMKM) life taught him to
+          measure what matters and plan things properly. As a person, curiosity
+          is important to improve his life better by learning something new.
         </p>
       </div>
     </div>
