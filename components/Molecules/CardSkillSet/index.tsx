@@ -21,7 +21,7 @@ export default function CardSkillSet(props: CardSkillSetProps) {
   });
 
   return (
-    <div className='transition duration-500 ease-in-out transform hover:-translate-y-5 hover:scale-110 w-auto md:w-auto md:h-80 lg:w-96 lg:h-80 bg-blue-50 dark:bg-gray-400 rounded-2xl pb-2 shadow-md'>
+    <div className='project-card card w-auto md:w-auto md:h-80 lg:w-96 lg:h-80 bg-blue-50 dark:bg-gray-400 rounded-2xl pb-2 shadow-md'>
       <p className={classStack}>{category}</p>
       <div className='flex flex-wrap justify-center items-center'>
         {stacks.map((stack, idx) => (

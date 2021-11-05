@@ -18,3 +18,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* card */
+.card {
+  transform: scale(1);
+  transition: transform 500ms ease;
+  will-change: transform;
+}
+
+.card:hover,
+.card:focus {
+  transform: scale(1.08);
+}

@@ -6,6 +6,13 @@ import cx from 'classnames';
 import { useRouter } from 'next/dist/client/router';
 import { MenuRounded } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
+import { AnimateSharedLayout, motion } from 'framer-motion';
+
+const spring = {
+  type: 'spring',
+  stiffness: 500,
+  damping: 30,
+};
 
 export default function Navbar() {
   const router = useRouter();

@@ -5,6 +5,7 @@ import HopeSection from './Hope';
 import PortofolioSection from './Portofolio';
 import SkillSetSection from './SkillSet';
 import SummarySection from './Summary';
+import dynamic from 'next/dynamic';
 
 export default function HomeComponent() {
   return (

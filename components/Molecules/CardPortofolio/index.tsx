@@ -25,8 +25,24 @@ export default function CardPortofolio(props: CardPortofolioProps) {
     props;
 
   return (
-    <div className='transition duration-500 ease-in-out transform hover:-translate-y-5 hover:scale-110 flex w-full p-6 justify-center'>
-      <Card className='w-full h-full bg-gray-100 dark:bg-gray-400'>
+    <div className='project-card card flex w-full p-6 justify-center'>
+      <Card className='relative w-full h-auto bg-gray-50 dark:bg-gray-700'>
+        <div className='absolute right-0 bg-gray-100 rounded-lg p-2 m-2'>
+          <Link href={githubLink}>
+            <a target='_blank' hidden={githubLink === ''}>
+              <IconButton aria-label='github' color='inherit'>
+                <GitHub />
+              </IconButton>
+            </a>
+          </Link>
+          <Link href={webLink}>
+            <a target='_blank' hidden={webLink === ''}>
+              <IconButton color='primary' aria-label='website'>
+                <Public />
+              </IconButton>
+            </a>
+          </Link>
+        </div>
         <CardMedia
           component='img'
           height={300}
@@ -61,36 +77,12 @@ export default function CardPortofolio(props: CardPortofolioProps) {
                 label={stack}
                 size='small'
                 variant='filled'
-                color='warning'
+                color='info'
                 className='m-1'
               />
             ))}
           </Typography>
         </CardContent>
-        <CardActions>
-          <Link href={githubLink}>
-            <a target='_blank'>
-              <IconButton
-                aria-label='github'
-                color='inherit'
-                hidden={githubLink === ''}
-              >
-                <GitHub />
-              </IconButton>
-            </a>
-          </Link>
-          <Link href={webLink}>
-            <a target='_blank'>
-              <IconButton
-                color='inherit'
-                aria-label='website'
-                hidden={webLink === ''}
-              >
-                <Public />
-              </IconButton>
-            </a>
-          </Link>
-        </CardActions>
       </Card>
     </div>
   );

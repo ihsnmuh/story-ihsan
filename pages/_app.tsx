@@ -1,14 +1,13 @@
-import '../styles/globals.css';
-import 'tailwindcss/tailwind.css';
-import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
-import { Layout } from '../components/Organism/layout';
-import Head from 'next/dist/shared/lib/head';
+import type { AppProps } from 'next/app';
 import { SnackbarProvider } from 'notistack';
+import 'tailwindcss/tailwind.css';
+import { Layout } from '../components/Organism/layout';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute='class'>
+    <ThemeProvider attribute='class' defaultTheme='system'>
       <SnackbarProvider maxSnack={3}>
         <Layout>
           <Component {...pageProps} />
