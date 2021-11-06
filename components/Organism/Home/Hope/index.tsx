@@ -3,7 +3,7 @@ import CardHope from '../../../Molecules/CardHope';
 export default function HopeSection() {
   return (
     <div className='flex justify-center content-center text-center p-6 lg:px-40 lg:py-20'>
-      <div className='flex flex-col md:flex-row justify-center'>
+      <div className='flex flex-col justify-center sm:grid sm:grid-cols-2 xl:grid-cols-3'>
         <CardHope
           image='screen.svg'
           title='Concise'

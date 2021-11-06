@@ -38,7 +38,7 @@ export default function PortofolioComponent() {
         title='Portofolio'
         subTitle='This page is about all project i have created'
       />
-      <div className='flex flex-col justify-center align-middle md:grid md:grid-cols-3 p-5 md:p-10 lg:px-32'>
+      <div className='flex flex-col justify-center align-middle sm:grid sm:grid-cols-2 xl:grid-cols-3 p-5 md:p-10 xl:px-32'>
         {currentData &&
           currentData.map((data, idx) => (
             <CardPortofolio

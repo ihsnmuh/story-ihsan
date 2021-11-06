@@ -13,7 +13,7 @@ export default function SkillSetSection() {
           oppurtunity to work with.
         </p>
       </div>
-      <div className='flex flex-col md:flex-row md:justify-around'>
+      <div className='flex flex-col sm:grid sm:grid-cols-2 xl:grid-cols-3'>
         {CardStacks.map((CardStack, idx) => (
           <div key={idx} className='p-6'>
             <CardSkillSet

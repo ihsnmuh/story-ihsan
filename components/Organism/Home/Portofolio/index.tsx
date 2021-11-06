@@ -21,7 +21,7 @@ export default function PortofolioSection() {
       </div>
       <div>
         <div>
-          <div className='flex flex-col justify-center align-middle md:flex-row md:justify-around'>
+          <div className='flex flex-col justify-center align-middle sm:grid sm:grid-cols-2 xl:grid-cols-3'>
             {DataPortofolio &&
               DataPortofolio.map((data, idx) => (
                 <CardPortofolio
