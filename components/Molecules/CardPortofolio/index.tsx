@@ -1,7 +1,6 @@
 import { GitHub, Public } from '@mui/icons-material';
 import {
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   Chip,
@@ -26,7 +25,7 @@ export default function CardPortofolio(props: CardPortofolioProps) {
 
   return (
     <div className='project-card card flex w-full p-6 justify-center'>
-      <Card className='relative w-full h-auto bg-gray-50 dark:bg-gray-700'>
+      <Card className='relative w-full h-auto bg-gray-50 dark:bg-gray-700 rounded-xl'>
         <div className='absolute right-0 bg-gray-100 rounded-lg p-2 m-2'>
           <Link href={githubLink}>
             <a target='_blank' hidden={githubLink === ''}>
@@ -60,11 +59,16 @@ export default function CardPortofolio(props: CardPortofolioProps) {
           >
             {title}{' '}
             <div>
-              <Chip label={category} size='small' color='error' />
+              <Chip
+                label={category}
+                size='small'
+                color='error'
+                className='bg-red-500'
+              />
             </div>
           </Typography>
           <Typography
-            variant='body2'
+            variant='body1'
             color='text.secondary'
             className='dark:text-white'
           >
@@ -78,7 +82,7 @@ export default function CardPortofolio(props: CardPortofolioProps) {
                 size='small'
                 variant='filled'
                 color='info'
-                className='m-1'
+                className='m-1 bg-blue-500 dark:bg-yellow-400'
               />
             ))}
           </Typography>

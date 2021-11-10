@@ -1,13 +1,20 @@
-import { GitHub, Instagram, LinkedIn } from '@mui/icons-material';
+import { GitHub, Instagram, LinkedIn, Mail } from '@mui/icons-material';
 import { SocialMedia } from '../../../../Atoms/socialMedia';
 
 export default function Footer() {
   return (
-    <footer className='py-5 px-10 bg-blue-500 dark:bg-gray-800 h-18 w-full justify-center md:flex lg:justify-between content-center items-center'>
+    <footer className='py-5 px-10 md:px-36 bg-blue-500 dark:bg-gray-800 h-18 w-full justify-center md:flex lg:justify-between content-center items-center'>
       <p className='text-white h-10 flex items-center mb-5 md:mb-0 lg:mb-0 text-center justify-center'>
         © 2021 ihsnmuh • Built with ❤️ by Muhammad Ihsan.
       </p>
       <div className='divide-white divide-x text-center'>
+        <SocialMedia
+          icon={
+            <Mail className='fill-current text-white hover:text-blue-600 dark:hover:text-yellow-500' />
+          }
+          socialMedia='Email'
+          link='mailto:muhaammadihsan@gmail.com'
+        />
         <SocialMedia
           icon={
             <LinkedIn className='fill-current text-white hover:text-blue-600 dark:hover:text-yellow-500' />

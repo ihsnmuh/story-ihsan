@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
@@ -17,6 +18,9 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
         },
+      },
+      backgroundImage: {
+        portofolio: "url('/image/bg-portofolio.jpg')",
       },
     },
   },

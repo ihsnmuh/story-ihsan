@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { MUISwitch } from '../../../../Atoms/MUISwitch';
 import cx from 'classnames';
 import { useRouter } from 'next/dist/client/router';
-import { MenuRounded } from '@mui/icons-material';
+import { Close, MenuRounded } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
 import { AnimateSharedLayout, motion } from 'framer-motion';
 
@@ -60,7 +60,7 @@ export default function Navbar() {
 
   return (
     <nav className='sticky top-0 bg-white shadow-md dark:bg-gray-800 z-50'>
-      <div className='max-w-6xl mx-auto content-center items-center px-4'>
+      <div className='max-w-7xl mx-auto content-center items-center px-4'>
         <div className='flex justify-between items-center'>
           {/* Logo */}
           <div>
@@ -104,7 +104,17 @@ export default function Navbar() {
                 size='large'
                 onClick={openNavbarHandler}
               >
-                <MenuRounded className='text-blue-500 dark:text-yellow-400 dark:hover:text-yellow-600' />
+                {isOpenNavbar ? (
+                  <Close
+                    fontSize='large'
+                    className='text-blue-500 dark:text-yellow-400 dark:hover:text-yellow-600'
+                  />
+                ) : (
+                  <MenuRounded
+                    fontSize='large'
+                    className='text-blue-500 dark:text-yellow-400 dark:hover:text-yellow-600'
+                  />
+                )}
               </IconButton>
             </div>
           </div>

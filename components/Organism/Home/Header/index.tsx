@@ -1,4 +1,10 @@
-import { Download, GitHub, Instagram, LinkedIn } from '@mui/icons-material';
+import {
+  Download,
+  GitHub,
+  Instagram,
+  LinkedIn,
+  Mail,
+} from '@mui/icons-material';
 import { Button } from '@mui/material';
 import { SocialMedia } from '../../../Atoms/socialMedia';
 import Typewriter from 'typewriter-effect';
@@ -60,6 +66,13 @@ export default function HeaderSection() {
             </Link>
           </div>
           <div className='divide-blue-500 divide-x dark:divide-white'>
+            <SocialMedia
+              icon={
+                <Mail className='fill-current text-blue-500 dark:text-white hover:text-blue-600 dark:hover:text-yellow-500' />
+              }
+              socialMedia='Email'
+              link='mailto:muhaammadihsan@gmail.com'
+            />
             <SocialMedia
               icon={
                 <LinkedIn className='fill-current text-blue-500 dark:text-white hover:text-blue-600 dark:hover:text-yellow-500' />

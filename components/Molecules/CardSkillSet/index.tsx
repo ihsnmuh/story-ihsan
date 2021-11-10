@@ -14,16 +14,16 @@ interface Stacks {
 export default function CardSkillSet(props: CardSkillSetProps) {
   const { category, stacks } = props;
   const classStack = cx({
-    'p-5 rounded-t-2xl text-white text-2xl font-semibold': true,
+    'p-5 rounded-t-xl text-white text-2xl font-semibold': true,
     'bg-red-500': category === '💼 Working with',
     'bg-yellow-500': category === '💻 Familiar with',
     'bg-green-500': category === '🔍 Exploring with',
   });
 
   return (
-    <div className='project-card card w-auto md:w-auto sm:h-96 bg-blue-50 dark:bg-gray-400 rounded-2xl pb-2 shadow-md'>
+    <div className='project-card card w-auto md:w-auto sm:h-96 bg-blue-50 dark:bg-gray-400 rounded-xl shadow-md'>
       <p className={classStack}>{category}</p>
-      <div className='flex flex-wrap justify-center items-center'>
+      <div className='flex flex-wrap justify-center items-center p-1'>
         {stacks.map((stack, idx) => (
           <StackTech key={idx} name={stack.name} icon={stack.icon} />
         ))}

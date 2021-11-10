@@ -10,7 +10,7 @@ interface CardHoopingProps {
 export default function CardHope(props: CardHoopingProps) {
   const { image, title, content } = props;
   return (
-    <div className='project-card card hover:scale-110 h-90 w-auto lg:w-80 bg-blue-50 dark:bg-gray-600 rounded-2xl shadow-lg m-6 p-8'>
+    <div className='project-card card hover:scale-110 h-90 w-auto lg:w-80 bg-blue-50 dark:bg-gray-600 rounded-xl shadow-lg m-6 p-8'>
       <div className='flex justify-center content-center mb-6'>
         <Image
           src={`/icon/${image}`}

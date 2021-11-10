@@ -36,7 +36,7 @@ export default function PortofolioSection() {
                 />
               ))}
           </div>
-          <div className='flex justify-center'>
+          <div className='flex justify-center p-5'>
             <Button
               onClick={handleAllPortofolio}
               variant='contained'
