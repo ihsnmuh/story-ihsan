@@ -130,7 +130,7 @@ export default function Navbar() {
       >
         <ul>
           {navbars.map((navbar, idx) => (
-            <li key={idx}>
+            <li key={idx} onClick={openNavbarHandler}>
               <Link href={navbar.link}>
                 <a
                   className={

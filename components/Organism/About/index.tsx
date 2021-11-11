@@ -1,6 +1,5 @@
 import React from 'react';
-import HeaderPhoto from '../General/HeaderPhoto';
-import Image from 'next/image';
+import Feedback from '../General/Feedback';
 
 export default function AboutComponent() {
   return (
@@ -19,36 +18,33 @@ export default function AboutComponent() {
               src='/image/Avatar.png'
               width='300'
               height='300'
+              loading='lazy'
             />
           </div>
           <article className='text-lg'>
             <p className='mb-8'>
-              Halo! Perkenalkan saya Ihsan lulusan Institut Pertanian Bogor,
-              saya menjadi seorang web development dimulai pada bulan Februari
-              2021. Pada saat ini memutuskan untuk berpindah karir dari berbagai
-              role pekerjaan mulai dari sales, procurement sampai ke digital
-              marketing di salah satu UMKM di Bogor selama 2 tahun. Pandemi
-              memaksa saya untuk survive lebih, oleh karena itu saya memutuskan
-              untuk belajar menjadi seorang web developer melalui bootcamp dan
-              berbagai course udemy.
+              Hello! I'm Ihsan, graduate of Agricultural Engineering, Bogor
+              Agriculture University. I became a web development especially
+              frontend development starting in June 2021. I started writing my
+              first line code in February 2021. At the time i decided to change
+              carreers from various job role from sales officer, procurement
+              staff, and last job as a digital marketer in Bogor for 2 years to
+              be web development. The pandemic forced me to survive more, that's
+              why i decided to learn to be a web developer through bootcamps and
+              various udemy courses.
             </p>
             <p className='mb-8'>
-              Frontend development menjadi pilihan saya, dikarenakan saya lebih
-              menyukai hal yang bersifat visual seperti design UI, design
-              Engineer dan lainnya. Banyak teknologi yang dapat dipelajari di
-              Frontend Development, sehingga membuat saya bersemangat untuk
-              mempelajari banyak hal yang saya bisa. Belajar dan terus berlatih
-              membuat saya menjadi lebih baik. Saya juga sedikit bisa dan
-              mengerti di Backend development karena pembelajaran pada saat
-              bootcamp.
+              Why i chosen Frontend development? because i like something visual
+              like UI design, engineering design and other. Many technologies
+              can be learn at frontend development, so that makes me exited to
+              learn as much as possible. Learn and keep practicing makes me to
+              be better.
             </p>
             <p className='mb-8'>
-              Dalam Website ini, saya mendedikasikan pengetahuan saya dibidang
-              web developer, UI/UX dan lainnya yang saya ketahui melalui blog
-              dan juga project yang sudah saya kerjakan. Saya percaya bahwa
-              dengan memberikan informasi atau ilmu yang saya miliki, membuat
-              saya tambah bertumbuh mengulang apa yang saya ketahui menjadi
-              lebih baik.
+              In this website, I dedicate my knowledge in web development and
+              UI/UX that i know through blogs and also project have i made
+              before. I believe, with sharing information and knowledge that i
+              have, make myself grew up and improve.
             </p>
           </article>
         </section>
@@ -57,13 +53,14 @@ export default function AboutComponent() {
           <h2 className='text-3xl font-bold mb-2'>Contact</h2>
           <article>
             <p className='mb-8 text-lg'>
-              Terimakasih telah mengunjungi website saya, jika ada pertanyaan
-              jangan sungkan untuk menghubungi saya di social media yang ada di
-              footer. 😊
+              Thank you for visiting my website, if you have any questions don't
+              hesitate to contact me on social media or fill out the feedback
+              form below. 😊
             </p>
           </article>
         </section>
       </main>
+      <Feedback />
     </>
   );
 }
