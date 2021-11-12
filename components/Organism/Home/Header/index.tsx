@@ -10,20 +10,34 @@ import { SocialMedia } from '../../../Atoms/socialMedia';
 import Typewriter from 'typewriter-effect';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { varianMotion } from '../../../../helpers/motion';
 
 export default function HeaderSection() {
   return (
     <motion.div
-      animate={{ x: [200, 0] }}
-      transition={{ ease: 'easeInOut', duration: 0.5 }}
+      variants={varianMotion(0)}
+      initial='before'
+      animate='after'
       className='min-h-5/6 bg-blue-100 dark:bg-gray-600 p-12 lg:px-40'
     >
       <div className='max-w-6xl space-y-10 lg:space-y-0 lg:space-x-10 flex flex-col-reverse lg:space-x-10 lg:flex lg:flex-row'>
         <div className='space-y-5 md:space-y-10 text-center lg:text-left md:flex md:flex-col md:justify-center lg:flex-1'>
           <span className='text-4xl md:text-5xl lg:text-5xl xl:text-6xl'>
-            <div className='animate-wiggle'>👋</div>
+            <motion.div
+              variants={varianMotion(0.1)}
+              initial='before'
+              animate='after'
+              className='animate-wiggle'
+            >
+              👋
+            </motion.div>
           </span>
-          <h1 className='space-y-1 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-blue-500 dark:text-yellow-400'>
+          <motion.h1
+            variants={varianMotion(0.1)}
+            initial='before'
+            animate='after'
+            className='space-y-1 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-blue-500 dark:text-yellow-400'
+          >
             {
               <Typewriter
                 options={{
@@ -33,8 +47,13 @@ export default function HeaderSection() {
                 }}
               />
             }
-          </h1>
-          <p className='text-xl md:text-2xl lg:text-3xl text-gray-900 dark:text-white'>
+          </motion.h1>
+          <motion.p
+            variants={varianMotion(0.2)}
+            initial='before'
+            animate='after'
+            className='text-xl md:text-2xl lg:text-3xl text-gray-900 dark:text-white'
+          >
             I’m{' '}
             <span className='font-bold text-blue-500 dark:text-yellow-400'>
               Ihsan
@@ -51,8 +70,12 @@ export default function HeaderSection() {
             <span className='font-bold text-blue-500 dark:text-yellow-400'>
               Jakarta
             </span>
-          </p>
-          <div>
+          </motion.p>
+          <motion.div
+            variants={varianMotion(0.3)}
+            initial='before'
+            animate='after'
+          >
             <Link href='https://drive.google.com/file/d/1rkuoBdLaBgRSqUxd4_Gbl6f7YllaT4S5/view?usp=sharing'>
               <a target='_blank'>
                 <Button
@@ -64,8 +87,13 @@ export default function HeaderSection() {
                 </Button>
               </a>
             </Link>
-          </div>
-          <div className='divide-blue-500 divide-x dark:divide-white'>
+          </motion.div>
+          <motion.div
+            variants={varianMotion(0.4)}
+            initial='before'
+            animate='after'
+            className='divide-blue-500 divide-x dark:divide-white'
+          >
             <SocialMedia
               icon={
                 <Mail className='fill-current text-blue-500 dark:text-white hover:text-blue-600 dark:hover:text-yellow-500' />
@@ -94,9 +122,14 @@ export default function HeaderSection() {
               socialMedia='Instagram'
               link='https://instagram.com/ihsnmuh'
             />
-          </div>
+          </motion.div>
         </div>
-        <div className='relative lg:flex-1'>
+        <motion.div
+          variants={varianMotion(0.2)}
+          initial='before'
+          animate='after'
+          className='relative lg:flex-1'
+        >
           <div className='relative w-full h-full flex justify-center lg:justify-end content-center items-center mb-10 md:mb-10'>
             <div className='transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 relative shadow-lg h-64 w-64 lg:h-96 lg:w-96 rounded-full bg-transparent border-8 p-2 border-blue-500 dark:border-yellow-400 flex items-center justify-center'>
               <img
@@ -105,7 +138,7 @@ export default function HeaderSection() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );

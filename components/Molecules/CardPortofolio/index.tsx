@@ -7,6 +7,7 @@ import {
   IconButton,
   Typography,
 } from '@mui/material';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 interface CardPortofolioProps {

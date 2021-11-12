@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import { varianMotion } from '../../../../helpers/motion';
 import styles from './index.module.css';
 
 interface HeaderPhotoProps {
@@ -10,13 +12,30 @@ export default function HeaderPhoto(props: HeaderPhotoProps) {
   const { title, subTitle, page } = props;
 
   return (
-    <div
+    <motion.div
+      variants={varianMotion(0)}
+      initial='before'
+      animate='after'
       className={
         page === 'portofolio' ? styles.containerPorto : styles.containerBlog
       }
     >
-      <h1 className='z-10 mb-2 text-white text-4xl font-bold'>{title}</h1>
-      <p className='z-10 text-white text-l md:text-xl italic'>{subTitle}</p>
-    </div>
+      <motion.h1
+        variants={varianMotion(0.05)}
+        initial='before'
+        animate='after'
+        className='z-10 mb-2 text-white text-4xl font-bold'
+      >
+        {title}
+      </motion.h1>
+      <motion.p
+        variants={varianMotion(0.1)}
+        initial='before'
+        animate='after'
+        className='z-10 text-white text-l md:text-xl italic'
+      >
+        {subTitle}
+      </motion.p>
+    </motion.div>
   );
 }
