@@ -11,8 +11,19 @@ import Typewriter from 'typewriter-effect';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { varianMotion } from '../../../../helpers/motion';
+import * as ga from 'lib/ga/index';
 
 export default function HeaderSection() {
+  function trackDownloadResume() {
+    ga.event({
+      action: 'download_resume',
+      params: {
+        event_category: 'Documents',
+        event_label: 'Download Resume Header',
+      },
+    });
+  }
+
   return (
     <motion.div
       variants={varianMotion(0)}
@@ -81,6 +92,7 @@ export default function HeaderSection() {
                 <Button
                   className='bg-blue-500 dark:bg-yellow-400 dark:hover:bg-yellow-500'
                   variant='contained'
+                  onClick={() => trackDownloadResume()}
                   startIcon={<Download />}
                 >
                   Download Resume

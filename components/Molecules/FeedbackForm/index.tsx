@@ -1,6 +1,9 @@
 import { useSnackbar } from 'notistack';
 import React, { useState } from 'react';
 import { feedbackType } from '../../../types';
+import * as ga from 'lib/ga/index';
+import { Button } from '@mui/material';
+import { LoadingButton } from '@mui/lab';
 
 async function sendFeedbackData(feedbackData: feedbackType) {
   const respose = await fetch('api/feedback', {
@@ -24,9 +27,24 @@ export default function FeedbackForm() {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
+  const [loading, setLoading] = useState(false);
+
+  function trackSubmitFeedback() {
+    ga.event({
+      action: 'submit_feedback',
+      params: {
+        event_category: 'Feedbacks',
+        event_label: 'Submit Feedback',
+      },
+    });
+  }
 
   async function sendFeedbackHandler(event: { preventDefault: () => void }) {
     event.preventDefault();
+
+    trackSubmitFeedback();
+
+    setLoading(true);
 
     const newMessage = {
       name,
@@ -40,8 +58,10 @@ export default function FeedbackForm() {
       setEmail('');
       setName('');
       setMessage('');
+      setLoading(false);
     } catch (error: any) {
       console.log(error);
+      setLoading(false);
       enqueueSnackbar(error.message, { variant: 'error' });
     }
   }
@@ -81,9 +101,23 @@ export default function FeedbackForm() {
           required
         />
       </div>
-      <button className='transition duration-300 ease-in-out transform hover:-translate-y-0 hover:scale-105 bg-blue-500 text-white dark:bg-yellow-400 dark:hover:bg-yellow-500 h-12 w-full rounded-md drop-shadow-md'>
+      {/* <button
+        className='transition duration-300 ease-in-out transform hover:-translate-y-0 hover:scale-105 bg-blue-500 text-white dark:bg-yellow-400 dark:hover:bg-yellow-500 h-12 w-full rounded-md drop-shadow-md'
+        disabled={loading}
+      >
         Send
-      </button>
+      </button> */}
+      <LoadingButton
+        type='submit'
+        className='bg-blue-500 text-white dark:bg-yellow-400 dark:hover:bg-yellow-500 h-12'
+        variant='contained'
+        fullWidth
+        size='large'
+        loading={loading}
+        loadingPosition='start'
+      >
+        Send
+      </LoadingButton>
     </form>
   );
 }

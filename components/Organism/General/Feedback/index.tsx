@@ -1,5 +1,5 @@
-import Dotes from '../../../Atoms/dotes';
-import FeedbackForm from '../../../Molecules/FeedbackForm';
+import Dotes from 'components/Atoms/dotes';
+import FeedbackForm from 'components/Molecules/FeedbackForm';
 
 export default function Feedback() {
   return (
