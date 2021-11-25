@@ -15,13 +15,15 @@ import * as ga from 'lib/ga/index';
 
 export default function HeaderSection() {
   function trackDownloadResume() {
-    ga.event({
-      action: 'download_resume',
-      params: {
-        event_category: 'Documents',
-        event_label: 'Download Resume Header',
-      },
-    });
+    if (process.env.NEXT_PUBLIC_MODE === 'production') {
+      ga.event({
+        action: 'download_resume',
+        params: {
+          event_category: 'Documents',
+          event_label: 'Download Resume Header',
+        },
+      });
+    }
   }
 
   return (

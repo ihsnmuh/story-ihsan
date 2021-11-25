@@ -1,11 +1,15 @@
 {
   "name": "story-ihsan",
+  "author": {
+    "name": "Muhammad Ihsan",
+    "email": "ihsanmuhaammad@gmail.com"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "env-cmd -f .env next dev",
+    "build": "env-cmd -f .env next build",
+    "start": "env-cmd -f .env next start"
   },
   "dependencies": {
     "@emotion/react": "^11.5.0",

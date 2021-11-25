@@ -12,13 +12,15 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = (url: any) => {
-      ga.pageview(url);
-    };
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
+    if (process.env.NEXT_PUBLIC_MODE === 'production') {
+      const handleRouteChange = (url: any) => {
+        ga.pageview(url);
+      };
+      router.events.on('routeChangeComplete', handleRouteChange);
+      return () => {
+        router.events.off('routeChangeComplete', handleRouteChange);
+      };
+    }
   }, [router.events]);
 
   return (

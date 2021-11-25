@@ -32,13 +32,10 @@ const Home: NextPage = () => {
         <meta property='og:url' content='https://ihsanmuh.vercel.app/' />
         <meta property='og:site_name' content='Muhammad Ihsan' />
 
-        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@ihcaann' />
         <meta name='twitter:url' content='https://ihsanmuh.vercel.app/' />
-        <meta
-          name='twitter:title'
-          content='Personal Website | Muhammad Ihsan'
-        />
+        <meta name='twitter:title' content='Personal Website Muhammad Ihsan' />
         <meta name='twitter:image' content='/icon/ihsan-logo.svg' />
         <meta name='twitter:creator' content='@ihcaann' />
         <meta

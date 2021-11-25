@@ -30,13 +30,15 @@ export default function FeedbackForm() {
   const [loading, setLoading] = useState(false);
 
   function trackSubmitFeedback() {
-    ga.event({
-      action: 'submit_feedback',
-      params: {
-        event_category: 'Feedbacks',
-        event_label: 'Submit Feedback',
-      },
-    });
+    if (process.env.NEXT_PUBLIC_MODE === 'production') {
+      ga.event({
+        action: 'submit_feedback',
+        params: {
+          event_category: 'Feedbacks',
+          event_label: 'Submit Feedback',
+        },
+      });
+    }
   }
 
   async function sendFeedbackHandler(event: { preventDefault: () => void }) {

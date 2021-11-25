@@ -26,7 +26,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
     let client;
 
-    const connectionString = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTERNAME}.rqxy3.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`;
+    const connectionString = `mongodb+srv://${process.env.NEXT_PUBLIC_MONGODB_USERNAME}:${process.env.NEXT_PUBLIC_MONGODB_PASSWORD}@${process.env.NEXT_PUBLIC_MONGODB_CLUSTERNAME}.rqxy3.mongodb.net/${process.env.NEXT_PUBLIC_MONGODB_DATABASE}?retryWrites=true&w=majority`;
 
     try {
       client = await MongoClient.connect(connectionString);
