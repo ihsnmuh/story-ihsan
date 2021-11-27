@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           property='og:description'
           content="Muhammad Ihsan's personal website made with love"
         />
-        <meta property='og:image' content='/icon/ihsan-logo.svg' />
+        <meta property='og:image' content='https://iili.io/5Peu7s.png' />
         <meta property='og:image:secure_url' content='/icon/ihsan-logo.svg' />
         <meta property='og:url' content='https://ihsanmuh.vercel.app/' />
         <meta property='og:site_name' content='Muhammad Ihsan' />
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
         <meta name='twitter:site' content='@ihcaann' />
         <meta name='twitter:url' content='https://ihsanmuh.vercel.app/' />
         <meta name='twitter:title' content='Personal Website Muhammad Ihsan' />
-        <meta name='twitter:image' content='/icon/ihsan-logo.svg' />
+        <meta name='twitter:image' content='https://iili.io/5Peu7s.png' />
         <meta name='twitter:creator' content='@ihcaann' />
         <meta
           name='twitter:description'
