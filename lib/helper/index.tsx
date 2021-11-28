@@ -17,9 +17,7 @@ export function openGraph({
     : undefined;
   const ogDesc = encodeURIComponent(description.trim());
 
-  return `https://og.thcl.dev/api/general?siteName=${ogSiteName}&description=${ogDesc}&logo=${ogLogo}${
+  return `https://og.thcl.dev/api/general?siteName=${ogSiteName}&description=${ogDesc}&theme=light&logo=${ogLogo}${
     ogTemplateTitle ? `&templateTitle=${ogTemplateTitle}` : ''
   }`;
 }
-
-// https://og.thcl.dev/api/general?description=ini%20adalah%20personal%20Web%20Iihsan&logo=https%3A%2F%2Fiili.io%2F5Pjiga.jpg&logoWidth=150&siteName=Personal%20Web%20Muhammad%20Ihsan&templateTitle=Personal%20Web%20Ihsan&theme=light

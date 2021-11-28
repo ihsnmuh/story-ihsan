@@ -3,9 +3,9 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 const defaultMeta = {
-  title: 'Personal Website | Muhammad Ihsan',
+  title: 'Muhammad Ihsan',
   siteName: 'Muhammad Ihsan',
-  description: "Muhammad Ihsan's personal website made with love",
+  description: 'Welcome to my website. I hope you guys like it!',
   url: 'https://ihsanmuh.vercel.app/',
   image: 'https://iili.io/5Pjiga.jpg',
   type: 'website',
