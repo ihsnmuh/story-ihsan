@@ -7,8 +7,7 @@ const defaultMeta = {
   siteName: 'Muhammad Ihsan',
   description: "Muhammad Ihsan's personal website made with love",
   url: 'https://ihsanmuh.vercel.app/',
-  image:
-    'https://og-image-ihsan.vercel.app/**Home**%20%7C%20ihsanmuh.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fres.cloudinary.com%2Fdoc4dinqa%2Fimage%2Fupload%2Fv1638066468%2Fihsan%2FLogo-ihsan-long_cghzar.svg&widths=250',
+  image: 'https://iili.io/5Pjiga.jpg',
   type: 'website',
   robots: 'follow, index',
 };

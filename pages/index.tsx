@@ -29,11 +29,7 @@ const Home: NextPage = () => {
         />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/doc4dinqa/image/upload/v1638057323/ihsan/Logo_z2rxoq.svg'
-        />
-        <meta
-          property='og:image:secure_url'
-          content='https://res.cloudinary.com/doc4dinqa/image/upload/v1638057323/ihsan/Logo_z2rxoq.svg'
+          content='https://og-image-ihsan.vercel.app/**Home**%20%7C%20ihsanmuh.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fres.cloudinary.com%2Fdoc4dinqa%2Fimage%2Fupload%2Fv1638066468%2Fihsan%2FLogo-ihsan-long_cghzar.svg&widths=250'
         />
         <meta property='og:url' content='https://ihsanmuh.vercel.app/' />
         <meta property='og:site_name' content='Muhammad Ihsan' />
