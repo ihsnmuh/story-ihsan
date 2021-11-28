@@ -65,7 +65,7 @@ export default function Seo(props: SeoProps) {
           <meta
             name='author'
             property='article:author'
-            content='Theodorus Clarence'
+            content='Muhammad Ihsan'
           />
         </>
       )}

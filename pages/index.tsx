@@ -1,3 +1,4 @@
+import Seo from 'components/Molecules/Seo';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import HomeComponent from '../components/Organism/Home';
@@ -5,7 +6,8 @@ import HomeComponent from '../components/Organism/Home';
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
+      <Seo />
+      {/* <Head>
         <meta charSet='UTF-8' />
         <link rel='icon' href='/icon/ihsan-logo.svg' />
         <link rel='icon' href='/icon/ihsan-logo.svg' sizes='32x32' />
@@ -47,7 +49,7 @@ const Home: NextPage = () => {
           name='twitter:description'
           content="Muhammad Ihsan's personal website made with love"
         />
-      </Head>
+      </Head> */}
       <HomeComponent />
     </>
   );
