@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 const defaultMeta = {
-  title: 'Muhammad Ihsan',
+  title: "Muhammad Ihsan's Portofolio",
   siteName: 'Muhammad Ihsan',
   description: 'Welcome to my website. I hope you guys like it!',
   url: 'https://ihsanmuh.vercel.app/',
