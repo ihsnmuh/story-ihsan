@@ -1,12 +1,5 @@
 import { GitHub, Public } from '@mui/icons-material';
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Chip,
-  IconButton,
-  Typography,
-} from '@mui/material';
+import { Card, CardContent, CardMedia, Chip, IconButton, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -21,8 +14,7 @@ interface CardPortofolioProps {
 }
 
 export default function CardPortofolio(props: CardPortofolioProps) {
-  const { image, title, category, description, stacks, githubLink, webLink } =
-    props;
+  const { image, title, category, description, stacks, githubLink, webLink } = props;
 
   return (
     <div className='project-card card flex w-full p-6 justify-center'>
@@ -47,32 +39,21 @@ export default function CardPortofolio(props: CardPortofolioProps) {
           component='img'
           height={300}
           width='full'
-          image={`/image/${image}.png`}
+          image={`/image/portofolio/${image}.png`}
           alt={image}
           className='bg-contain bg-center'
+          sx={{
+            height: 180,
+          }}
         />
         <CardContent>
-          <Typography
-            gutterBottom
-            variant='h5'
-            component='div'
-            className='font-bold dark:text-white'
-          >
+          <Typography gutterBottom variant='h5' component='div' className='font-bold dark:text-white'>
             {title}{' '}
             <div>
-              <Chip
-                label={category}
-                size='small'
-                color='error'
-                className='bg-red-500'
-              />
+              <Chip label={category} size='small' color='error' className='bg-red-500' />
             </div>
           </Typography>
-          <Typography
-            variant='body1'
-            color='text.secondary'
-            className='dark:text-white'
-          >
+          <Typography variant='body1' color='text.secondary' className='dark:text-white'>
             {description}
           </Typography>
           <Typography component='div' className='py-2 flex flex-wrap'>
