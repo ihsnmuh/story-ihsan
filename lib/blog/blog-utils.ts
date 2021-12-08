@@ -6,7 +6,9 @@ type PostItems = {
   [key: string]: string;
 };
 
-const postsDirectory = join(process.cwd(), 'contents/blog');
+export const postsDirectory = join(process.cwd(), 'contents/blog');
+
+export const postFilePaths = fs.readdirSync(postsDirectory).filter((path) => /\.mdx?$/.test(path));
 
 export function getPostFiles(): string[] {
   return fs.readdirSync(postsDirectory);

@@ -7,6 +7,7 @@ module.exports = {
     config.resolve.alias['@components'] = resolve(__dirname, 'components');
     config.resolve.alias['@helpers'] = resolve(__dirname, 'helpers');
     config.resolve.alias['@lib'] = resolve(__dirname, 'lib');
+    config.resolve.alias['@styles'] = resolve(__dirname, 'styles');
     return config;
   },
 };

@@ -1,12 +1,13 @@
+import { Layout } from 'components/Organism/layout';
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/dist/client/router';
 import { SnackbarProvider } from 'notistack';
 import { useEffect } from 'react';
 import 'tailwindcss/tailwind.css';
-import { Layout } from '../components/Organism/layout';
-import '../styles/globals.css';
-import * as ga from '../lib/ga';
+import * as ga from 'lib/ga';
+import 'styles/globals.css';
+import 'styles/mdx.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();

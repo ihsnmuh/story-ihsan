@@ -6,7 +6,7 @@ const defaultMeta = {
   title: "Muhammad Ihsan's Portofolio",
   siteName: 'Muhammad Ihsan',
   description: 'Welcome to my website. I hope you guys like it!',
-  url: 'https://ihsanmuh.vercel.app/',
+  url: 'https://ihsanmuh.vercel.app',
   image: 'https://iili.io/5Pjiga.jpg',
   type: 'website',
   robots: 'follow, index',
@@ -23,9 +23,7 @@ export default function Seo(props: SeoProps) {
     ...defaultMeta,
     ...props,
   };
-  meta['title'] = props.templateTitle
-    ? `${props.templateTitle} | ${meta.siteName}`
-    : meta.title;
+  meta['title'] = props.templateTitle ? `${props.templateTitle} | ${meta.siteName}` : meta.title;
 
   // Use siteName if there is templateTitle
   // but show full title if there is none
@@ -57,16 +55,8 @@ export default function Seo(props: SeoProps) {
       {meta.date && (
         <>
           <meta property='article:published_time' content={meta.date} />
-          <meta
-            name='publish_date'
-            property='og:publish_date'
-            content={meta.date}
-          />
-          <meta
-            name='author'
-            property='article:author'
-            content='Muhammad Ihsan'
-          />
+          <meta name='publish_date' property='og:publish_date' content={meta.date} />
+          <meta name='author' property='article:author' content='Muhammad Ihsan' />
         </>
       )}
 
@@ -75,10 +65,7 @@ export default function Seo(props: SeoProps) {
         <link key={linkProps.href} {...linkProps} />
       ))}
       <meta name='msapplication-TileColor' content='#ffffff' />
-      <meta
-        name='msapplication-TileImage'
-        content='/favicon/ms-icon-144x144.png'
-      />
+      <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png' />
       <meta name='theme-color' content='#ffffff' />
     </Head>
   );

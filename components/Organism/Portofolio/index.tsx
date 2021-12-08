@@ -36,11 +36,7 @@ export default function PortofolioComponent() {
 
   return (
     <>
-      <HeaderPhoto
-        title='Portofolio'
-        subTitle='This page is about all project i have created'
-        page='portofolio'
-      />
+      <HeaderPhoto title='Portofolio' subTitle='This page is about all project i have created' page='portofolio' />
       <motion.div
         variants={varianMotion(0.2)}
         initial='before'
@@ -63,13 +59,7 @@ export default function PortofolioComponent() {
       </motion.div>
       <div className='flex justify-center p-10'>
         <div className='bg-blue-100 dark:bg-gray-400 rounded p-2'>
-          <Pagination
-            color='primary'
-            size='large'
-            count={pageCount}
-            page={page}
-            onChange={handleChange}
-          />
+          <Pagination color='primary' size='large' count={pageCount} page={page} onChange={handleChange} />
         </div>
       </div>
     </>

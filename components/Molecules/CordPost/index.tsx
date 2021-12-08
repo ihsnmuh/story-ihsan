@@ -22,7 +22,7 @@ export default function CardPost(props: CardPostProps) {
         <div className='absolute left-0 bg-gray-100 rounded-lg p-1 m-2'>
           <div className='flex justify-center'>
             <AccessTimeFilled className='mr-1 fill-current text-blue-500 dark:text-yellow-400' />
-            <p>{timeReading(content)}</p>
+            {timeReading(content)}
           </div>
         </div>
         <CardMedia
