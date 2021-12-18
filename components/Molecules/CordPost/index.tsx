@@ -20,9 +20,9 @@ export default function CardPost(props: CardPostProps) {
     <div className='project-card card flex w-full p-6 justify-center'>
       <Card className='relative w-full h-auto bg-gray-50 dark:bg-gray-700 rounded-xl'>
         <div className='absolute left-0 bg-gray-100 rounded-lg p-1 m-2'>
-          <div className='flex justify-center'>
-            <AccessTimeFilled className='mr-1 fill-current text-blue-500 dark:text-yellow-400' />
-            {timeReading(content)}
+          <div className='flex justify-center p-1'>
+            {/* <AccessTimeFilled className='mr-1 fill-current text-blue-500 dark:text-yellow-400' /> */}
+            ☕️ {timeReading(content)}
           </div>
         </div>
         <CardMedia
@@ -37,13 +37,13 @@ export default function CardPost(props: CardPostProps) {
           }}
         />
         <CardContent>
-          <Typography gutterBottom variant='body2' component='div' className='font-semibold dark:text-white'>
+          <Typography gutterBottom variant='body2' component='div' className='dark:text-white'>
             📆 {formatDate(publishedAt)}
           </Typography>
           <Typography gutterBottom variant='h5' component='div' className='font-bold dark:text-white'>
             {title}
           </Typography>
-          <Typography variant='body1' color='text.secondary' className='dark:text-white'>
+          <Typography variant='body2' color='text.secondary' className='dark:text-white'>
             {description}
           </Typography>
           <Typography component='div' className='py-2 flex flex-wrap'>

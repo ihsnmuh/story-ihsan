@@ -10,7 +10,7 @@
 - [x] Light and dark mode using Tailwindcss
 - [x] Add SEO Component
 - [x] Add Google analytic
-- [ ] Add page Blog Article
-- [ ] Dynamic OG Image preview for articles
+- [x] Add page Blog Article
+- [x] Dynamic OG Image preview for articles
 - [ ] SEO Optimization
 - [ ] Add comment section for articles using [React utterances component](https://www.npmjs.com/package/utterances-react-component) or using [giscus](https://github.com/giscus/giscus-component/tree/main/packages/react)

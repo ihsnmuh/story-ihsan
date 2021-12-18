@@ -6,3 +6,8 @@ export function formatDate(date: string) {
   });
   return formattedDate;
 }
+
+export function getYearNow() {
+  const year = new Date().getFullYear();
+  return year;
+}

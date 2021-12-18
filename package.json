@@ -7,7 +7,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "env-cmd -f .env next dev -p 8080",
+    "dev": "env-cmd -f .env next dev -p 3001",
     "build": "next build",
     "start": "next start"
   },

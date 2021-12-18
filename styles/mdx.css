@@ -1,12 +1,15 @@
 @layer base {
   h1 {
-    @apply mb-6 text-4xl font-bold;
+    @apply mb-6 text-2xl font-bold md:text-4xl;
   }
   h2 {
-    @apply mb-4 text-2xl font-semibold;
+    @apply mb-4 text-xl font-bold md:text-3xl;
   }
   h3 {
-    @apply mb-2 text-xl font-semibold;
+    @apply mb-2 text-lg font-bold md:text-2xl;
+  }
+  h4 {
+    @apply mb-1 text-base font-bold md:text-lg;
   }
   p {
     @apply mb-4;

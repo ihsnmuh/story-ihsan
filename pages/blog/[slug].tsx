@@ -14,13 +14,15 @@ import React from 'react';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import rehypeHighlight from 'rehype-highlight';
+import { Chip } from '@mui/material';
+import { timeReading } from 'helpers/readingTime';
 
 type PostType = {
   title: string;
   publishedAt: string;
   description?: string;
   banner?: string;
-  tag?: string[];
+  tags: string[];
   slug: string;
 };
 
@@ -40,23 +42,22 @@ export default function BlogPageSingle(props: BlogPostSingleProps) {
   return (
     <>
       <Seo title={`${frontMatter.title} | Muhammmad Ihsan`} description={frontMatter.description} />
-
-      <article className='m-10 md:m-32 lg:mx-40'>
-        <img
+      <article className='mx-10 my-8 md:mx-32 lg:mx-60'>
+        <Image
           alt={`${frontMatter.title}`}
           src={`/image/blog/${frontMatter.banner}`}
-          className='mb-5 rounded-lg bg-cover bg-center'
-          style={{
-            height: 'auto',
-            width: '100%',
-            backgroundSize: 'cover',
-          }}
+          className='object-cover rounded-xl'
+          layout='responsive'
+          height={600}
+          width={1200}
         />
+        <h1 className='mb-3 mt-8 text-gray-900 dark:text-white'>{frontMatter.title}</h1>
 
-        <h1 className='mb-3 text-gray-900 dark:text-white'>{frontMatter.title}</h1>
         <p className='mb-10 text-sm text-gray-500 dark:text-gray-400'>
-          {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
+          Created at {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')} by Muhammad Ihsan • ☕️{' '}
+          {timeReading(source.compiledSource)}
         </p>
+
         <div className='prose dark:prose-dark'>
           <MDXRemote {...source} components={components} />
         </div>
