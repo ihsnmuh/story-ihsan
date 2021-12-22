@@ -1,13 +1,16 @@
+import Seo from 'components/Molecules/Seo';
 import React from 'react';
 import AboutComponent from '../../components/Organism/About';
-import Head from 'next/head';
 
 export default function AboutPage() {
   return (
     <div>
-      <Head>
-        <title>About | Muhammad Ihsan</title>
-      </Head>
+      <Seo
+        title={`About | Muhammmad Ihsan`}
+        description={
+          "Hello! I'm Ihsan, graduate of Agricultural Engineering, Bogor Agriculture University. I became a web developer especially Frontend Developer starting in June 2021."
+        }
+      />
       <AboutComponent />
     </div>
   );

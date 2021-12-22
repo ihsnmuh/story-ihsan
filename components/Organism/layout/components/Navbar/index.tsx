@@ -23,8 +23,7 @@ export default function Navbar() {
   const [isOpenNavbar, setIsOpenNavbar] = useState(false);
 
   const classLink = cx({
-    'm-4 hover:bg-blue-600 hover:text-white rounded-md p-2 dark:hover:bg-yellow-500':
-      true,
+    'm-4 hover:bg-blue-600 hover:text-white rounded-md p-2 dark:hover:bg-yellow-500 text-black': true,
   });
 
   const classLinkActive = cx({
@@ -33,8 +32,7 @@ export default function Navbar() {
   });
 
   const classMenu = cx({
-    'block py-4 px-4 text-sm text-center hover:bg-blue-600 hover:text-white dark:hover:bg-yellow-500':
-      true,
+    'block py-4 px-4 text-sm text-center hover:bg-blue-600 hover:text-white dark:hover:bg-yellow-500 text-black': true,
   });
 
   const classMenuActive = cx({
@@ -66,12 +64,7 @@ export default function Navbar() {
           <div>
             <Link href='/'>
               <a className='flex items-center py-3 px-2 text-gray-500'>
-                <img
-                  src='/icon/ihsan-logo.svg'
-                  alt='ihsan-logo'
-                  width='80%'
-                  className='fill-current text-green-600'
-                />
+                <img src='/icon/ihsan-logo.svg' alt='ihsan-logo' width='80%' className='fill-current text-green-600' />
                 {/* <span>Ihsan</span> */}
               </a>
             </Link>
@@ -82,13 +75,7 @@ export default function Navbar() {
               {navbars.map((navbar, idx) => (
                 <li key={idx}>
                   <Link href={navbar.link}>
-                    <a
-                      className={
-                        pathname === navbar.link ? classLinkActive : classLink
-                      }
-                    >
-                      {navbar.name}
-                    </a>
+                    <a className={pathname === navbar.link ? classLinkActive : classLink}>{navbar.name}</a>
                   </Link>
                 </li>
               ))}
@@ -98,17 +85,9 @@ export default function Navbar() {
           <div className='flex items-center'>
             <MUISwitch defaultChecked={darkMode} onChange={darkModeHandler} />
             <div className='md:hidden flex items-center'>
-              <IconButton
-                color='primary'
-                component='span'
-                size='large'
-                onClick={openNavbarHandler}
-              >
+              <IconButton color='primary' component='span' size='large' onClick={openNavbarHandler}>
                 {isOpenNavbar ? (
-                  <Close
-                    fontSize='large'
-                    className='text-blue-500 dark:text-yellow-400 dark:hover:text-yellow-600'
-                  />
+                  <Close fontSize='large' className='text-blue-500 dark:text-yellow-400 dark:hover:text-yellow-600' />
                 ) : (
                   <MenuRounded
                     fontSize='large'
@@ -121,24 +100,12 @@ export default function Navbar() {
         </div>
       </div>
       {/* Mobile navbar */}
-      <div
-        className={
-          isOpenNavbar
-            ? 'md:hidden bg-gray-100 dark:bg-gray-900'
-            : 'hidden md:hidden'
-        }
-      >
+      <div className={isOpenNavbar ? 'md:hidden bg-gray-100 dark:bg-gray-900' : 'hidden md:hidden'}>
         <ul>
           {navbars.map((navbar, idx) => (
             <li key={idx} onClick={openNavbarHandler}>
               <Link href={navbar.link}>
-                <a
-                  className={
-                    pathname === navbar.link ? classMenuActive : classMenu
-                  }
-                >
-                  {navbar.name}
-                </a>
+                <a className={pathname === navbar.link ? classMenuActive : classMenu}>{navbar.name}</a>
               </Link>
             </li>
           ))}

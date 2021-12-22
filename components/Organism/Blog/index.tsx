@@ -1,5 +1,5 @@
-import { Pagination } from '@mui/material';
-import CardPost from 'components/Molecules/CordPost';
+import { Button, Pagination } from '@mui/material';
+import CardPost from 'components/Molecules/CardPost';
 import { motion } from 'framer-motion';
 import { varianMotion } from 'helpers/motion';
 import Link from 'next/link';
@@ -27,7 +27,7 @@ export default function BlogComponet(props: any) {
 
   return (
     <>
-      <HeaderPhoto title='Blog' subTitle='Coming Soon' page='blog' />
+      <HeaderPhoto title='Blog' subTitle='Welcome to my Blog, I hope you get insight here ' page='blog' />
       <motion.div
         variants={varianMotion(0.2)}
         initial='before'

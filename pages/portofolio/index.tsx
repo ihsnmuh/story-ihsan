@@ -1,12 +1,10 @@
-import Head from 'next/head';
+import Seo from 'components/Molecules/Seo';
 import PortofolioComponent from '../../components/Organism/Portofolio';
 
 export default function PortofolioPage() {
   return (
     <>
-      <Head>
-        <title>Portofolio | Muhammad Ihsan</title>
-      </Head>
+      <Seo title={`Portofolio | Muhammmad Ihsan`} description={'This page is about all project i have created'} />
       <PortofolioComponent />
     </>
   );

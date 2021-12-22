@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 const defaultMeta = {
   title: "Muhammad Ihsan's Portofolio",
   siteName: 'Muhammad Ihsan',
-  description: 'Welcome to my website. I hope you guys like it!',
+  description: 'Welcome to my personal website. I work with Javascript and React. I hope you like it!',
   url: 'https://ihsanmuh.vercel.app',
   image: 'https://iili.io/5Pjiga.jpg',
   type: 'website',

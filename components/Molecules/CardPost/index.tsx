@@ -1,5 +1,4 @@
-import { AccessTimeFilled, CalendarToday } from '@mui/icons-material';
-import { Card, CardContent, CardMedia, Chip, IconButton, Typography } from '@mui/material';
+import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
 import { formatDate } from 'helpers/formatDate';
 import { timeReading } from 'helpers/readingTime';
 import React from 'react';
