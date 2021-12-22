@@ -23,7 +23,7 @@ export default function Navbar() {
   const [isOpenNavbar, setIsOpenNavbar] = useState(false);
 
   const classLink = cx({
-    'm-4 hover:bg-blue-600 hover:text-white rounded-md p-2 dark:hover:bg-yellow-500 text-black': true,
+    'm-4 hover:bg-blue-600 hover:text-white rounded-md p-2 dark:hover:bg-yellow-500 text-black dark:text-white': true,
   });
 
   const classLinkActive = cx({
@@ -32,7 +32,8 @@ export default function Navbar() {
   });
 
   const classMenu = cx({
-    'block py-4 px-4 text-sm text-center hover:bg-blue-600 hover:text-white dark:hover:bg-yellow-500 text-black': true,
+    'block py-4 px-4 text-sm text-center hover:bg-blue-600 hover:text-white dark:hover:bg-yellow-500 text-black dark:text-white':
+      true,
   });
 
   const classMenuActive = cx({
