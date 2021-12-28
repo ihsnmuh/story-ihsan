@@ -103,15 +103,9 @@ export default function FeedbackForm() {
           required
         />
       </div>
-      {/* <button
-        className='transition duration-300 ease-in-out transform hover:-translate-y-0 hover:scale-105 bg-blue-500 text-white dark:bg-yellow-400 dark:hover:bg-yellow-500 h-12 w-full rounded-md drop-shadow-md'
-        disabled={loading}
-      >
-        Send
-      </button> */}
       <LoadingButton
         type='submit'
-        className='bg-blue-500 text-white dark:bg-yellow-400 dark:hover:bg-yellow-500 h-12'
+        className='bg-blue-default-blue text-white dark:bg-yellow-400 dark:hover:bg-yellow-500 h-12'
         variant='contained'
         fullWidth
         size='large'

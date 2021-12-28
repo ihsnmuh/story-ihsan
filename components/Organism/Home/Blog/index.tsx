@@ -22,7 +22,7 @@ export default function BlogSection(props: any) {
   }
 
   return (
-    <div className='flex flex-col justify-center content-center p-6 lg:px-40 lg:py-20 bg-blue-100 dark:bg-gray-600'>
+    <div className='flex flex-col justify-center content-center px-6 pb-6 lg:px-40 lg:pb-20'>
       <Dotes />
       <div className='text-3xl font-bold p-5 text-center'>{'<Blog/>'}</div>
       <div>
@@ -48,7 +48,7 @@ export default function BlogSection(props: any) {
             <Button
               onClick={handleAllBlog}
               variant='contained'
-              className='bg-blue-500 dark:bg-yellow-400 text-white'
+              className='bg-blue-default-blue dark:bg-yellow-400 text-white'
               endIcon={<ArrowForward />}
             >
               See All

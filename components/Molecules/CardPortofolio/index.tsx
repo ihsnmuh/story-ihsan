@@ -23,7 +23,7 @@ export default function CardPortofolio(props: CardPortofolioProps) {
           <Link href={githubLink}>
             <a target='_blank' hidden={githubLink === ''}>
               <IconButton aria-label='github' color='inherit'>
-                <GitHub />
+                <GitHub className='text-black' />
               </IconButton>
             </a>
           </Link>
@@ -62,9 +62,9 @@ export default function CardPortofolio(props: CardPortofolioProps) {
                 key={idx}
                 label={stack}
                 size='small'
-                variant='filled'
+                variant='outlined'
                 color='info'
-                className='m-1 bg-blue-500 dark:bg-yellow-400'
+                className='m-1 dark:bg-yellow-400 dark:text-white'
               />
             ))}
           </Typography>

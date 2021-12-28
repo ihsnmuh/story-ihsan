@@ -21,7 +21,7 @@ export default function CardSkillSet(props: CardSkillSetProps) {
   });
 
   return (
-    <div className='project-card card w-auto md:w-auto sm:h-96 bg-blue-50 dark:bg-gray-400 rounded-xl shadow-md'>
+    <div className='project-card card w-auto md:w-auto sm:h-96 bg-gray-50 dark:bg-gray-400 rounded-xl shadow-md'>
       <p className={classStack}>{category}</p>
       <div className='flex flex-wrap justify-center items-center p-1'>
         {stacks.map((stack, idx) => (

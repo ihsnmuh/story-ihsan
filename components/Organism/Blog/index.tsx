@@ -1,4 +1,5 @@
-import { Button, Pagination } from '@mui/material';
+import { KeyboardArrowUp } from '@mui/icons-material';
+import { Box, Button, Fab, Pagination, useScrollTrigger, Zoom } from '@mui/material';
 import CardPost from 'components/Molecules/CardPost';
 import { motion } from 'framer-motion';
 import { varianMotion } from 'helpers/motion';
@@ -29,6 +30,7 @@ export default function BlogComponet(props: any) {
     <>
       <HeaderPhoto title='Blog' subTitle='Welcome to my Blog, I hope you get insight here ' page='blog' />
       <motion.div
+        id='card-post'
         variants={varianMotion(0.2)}
         initial='before'
         animate='after'

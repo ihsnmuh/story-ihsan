@@ -23,21 +23,22 @@ export default function Navbar() {
   const [isOpenNavbar, setIsOpenNavbar] = useState(false);
 
   const classLink = cx({
-    'm-4 hover:bg-blue-600 hover:text-white rounded-md p-2 dark:hover:bg-yellow-500 text-black dark:text-white': true,
+    'm-4 p-2 text-black rounded-md hover:bg-blue-default-blue hover:text-white dark:hover:bg-yellow-500 dark:text-white':
+      true,
   });
 
   const classLinkActive = cx({
-    'm-4 hover:bg-blue-600 hover:text-white rounded-md p-2 bg-blue-500 dark:bg-yellow-400 dark:hover:bg-yellow-500 text-white':
+    'm-4 text-blue-default-blue font-semibold p-2 border-b-4 border-blue-default-blue hover:border-blue-600 hover:border-y-4 dark:text-yellow-500 dark:border-yellow-400 dark:hover:border-yellow-500':
       true,
   });
 
   const classMenu = cx({
-    'block py-4 px-4 text-sm text-center hover:bg-blue-600 hover:text-white dark:hover:bg-yellow-500 text-black dark:text-white':
+    'block py-4 px-4 text-sm text-center hover:bg-blue-default-blue hover:text-white dark:hover:bg-yellow-500 text-black dark:text-white':
       true,
   });
 
   const classMenuActive = cx({
-    'block py-4 px-4 text-sm text-center hover:bg-blue-600 hover:text-white bg-blue-500 dark:bg-yellow-500 text-white':
+    'block py-4 px-4 text-sm text-center hover:bg-blue-default-blue hover:text-white bg-blue-default-blue dark:bg-yellow-500 text-white':
       true,
   });
 
@@ -88,11 +89,14 @@ export default function Navbar() {
             <div className='md:hidden flex items-center'>
               <IconButton color='primary' component='span' size='large' onClick={openNavbarHandler}>
                 {isOpenNavbar ? (
-                  <Close fontSize='large' className='text-blue-500 dark:text-yellow-400 dark:hover:text-yellow-600' />
+                  <Close
+                    fontSize='large'
+                    className='text-blue-default-blue dark:text-yellow-400 dark:hover:text-yellow-600'
+                  />
                 ) : (
                   <MenuRounded
                     fontSize='large'
-                    className='text-blue-500 dark:text-yellow-400 dark:hover:text-yellow-600'
+                    className='text-blue-default-blue dark:text-yellow-400 dark:hover:text-yellow-600'
                   />
                 )}
               </IconButton>

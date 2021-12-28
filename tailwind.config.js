@@ -84,6 +84,7 @@ module.exports = {
       backgroundImage: {
         portofolio: "url('/image/bg-portofolio.jpg')",
       },
+      colors: { blue: { 'default-blue': '#2867B2' } },
     },
   },
   variants: {
