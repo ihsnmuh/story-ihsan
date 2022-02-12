@@ -69,28 +69,30 @@ export default function FeedbackForm() {
   }
 
   return (
-    <form className='p-2 md:p-10 space-y-6' onSubmit={sendFeedbackHandler}>
-      <div>
-        <p className='font-bold'>Full Name</p>
-        <input
-          value={name}
-          type='text'
-          placeholder='Your name'
-          onChange={(e) => setName(e.target.value)}
-          className='focus:outline-none focus:ring focus:border-blue-300 h-12 w-full rounded-md p-2 my-2'
-          required
-        />
-      </div>
-      <div>
-        <p className='font-bold'>Email</p>
-        <input
-          value={email}
-          type='email'
-          placeholder='Yourname@mail.com'
-          onChange={(e) => setEmail(e.target.value)}
-          className='focus:outline-none focus:ring focus:border-blue-300 h-12 w-full rounded-md p-2 my-2'
-          required
-        />
+    <form className='py-2 md:py-10 space-y-6' onSubmit={sendFeedbackHandler}>
+      <div className='md:flex md:gap-8'>
+        <div className='md:w-1/2'>
+          <p className='font-bold'>Full Name</p>
+          <input
+            value={name}
+            type='text'
+            placeholder='Your name'
+            onChange={(e) => setName(e.target.value)}
+            className='focus:outline-none focus:ring focus:border-blue-300 h-12 w-full rounded-md p-2 my-2'
+            required
+          />
+        </div>
+        <div className='md:w-1/2'>
+          <p className='font-bold'>Email</p>
+          <input
+            value={email}
+            type='email'
+            placeholder='Yourname@mail.com'
+            onChange={(e) => setEmail(e.target.value)}
+            className='focus:outline-none focus:ring focus:border-blue-300 h-12 w-full rounded-md p-2 my-2'
+            required
+          />
+        </div>
       </div>
       <div>
         <p className='font-bold'>Message</p>

@@ -20,6 +20,11 @@ a {
   box-sizing: border-box;
 }
 
+.layout {
+  max-width: 68rem;
+  @apply mx-auto w-11/12;
+}
+
 /* card */
 .card {
   transform: scale(1);

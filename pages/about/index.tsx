@@ -1,4 +1,5 @@
 import Seo from 'components/Molecules/Seo';
+import Feedback from 'components/Organism/General/Feedback';
 import React from 'react';
 import AboutComponent from '../../components/Organism/About';
 
@@ -12,6 +13,7 @@ export default function AboutPage() {
         }
       />
       <AboutComponent />
+      <Feedback />
     </div>
   );
 }

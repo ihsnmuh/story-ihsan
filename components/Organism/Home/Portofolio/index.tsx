@@ -14,35 +14,37 @@ export default function PortofolioSection() {
   }
 
   return (
-    <div className='flex flex-col justify-center content-center p-6 lg:px-40 lg:py-20'>
-      <Dotes />
-      <div className='text-3xl font-bold p-5 text-center'>{'<Portofolio/>'}</div>
-      <div>
+    <div className='flex flex-col justify-center content-center py-6 lg:py-20'>
+      <div className='layout'>
+        <Dotes />
+        <div className='text-3xl font-bold p-5 text-center'>{'<Portofolio/>'}</div>
         <div>
-          <div className='flex flex-col justify-center align-middle sm:grid sm:grid-cols-2 xl:grid-cols-3'>
-            {DataPortofolio &&
-              DataPortofolio.map((data, idx) => (
-                <CardPortofolio
-                  key={idx}
-                  image={data.image}
-                  title={data.title}
-                  category={data.category}
-                  description={data.description}
-                  stacks={data.stacks}
-                  githubLink={data.githubLink}
-                  webLink={data.webLink}
-                />
-              ))}
-          </div>
-          <div className='flex justify-center p-5'>
-            <Button
-              onClick={handleAllPortofolio}
-              variant='contained'
-              className='bg-blue-default-blue dark:bg-yellow-400 text-white'
-              endIcon={<ArrowForward />}
-            >
-              See All
-            </Button>
+          <div>
+            <div className='flex flex-col justify-center align-middle sm:grid sm:grid-cols-2 xl:grid-cols-3'>
+              {DataPortofolio &&
+                DataPortofolio.map((data, idx) => (
+                  <CardPortofolio
+                    key={idx}
+                    image={data.image}
+                    title={data.title}
+                    category={data.category}
+                    description={data.description}
+                    stacks={data.stacks}
+                    githubLink={data.githubLink}
+                    webLink={data.webLink}
+                  />
+                ))}
+            </div>
+            <div className='flex justify-center p-5'>
+              <Button
+                onClick={handleAllPortofolio}
+                variant='contained'
+                className='bg-blue-default-blue dark:bg-yellow-400 text-white'
+                endIcon={<ArrowForward />}
+              >
+                See All
+              </Button>
+            </div>
           </div>
         </div>
       </div>

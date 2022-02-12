@@ -25,9 +25,9 @@ export default function HeaderSection() {
       variants={varianMotion(0)}
       initial='before'
       animate='after'
-      className='min-h-5/6 bg-blue-50 dark:bg-gray-600 p-12 lg:px-40'
+      className='min-h-5/6 bg-blue-50 dark:bg-gray-600 py-12'
     >
-      <div className='max-w-6xl space-y-10 lg:space-y-0 lg:space-x-10 flex flex-col-reverse lg:space-x-10 lg:flex lg:flex-row'>
+      <div className='layout space-y-10 lg:space-y-0 lg:space-x-10 flex flex-col-reverse lg:space-x-10 lg:flex lg:flex-row'>
         <div className='space-y-5 md:space-y-10 text-center lg:text-left md:flex md:flex-col md:justify-center lg:flex-1'>
           <span className='text-4xl md:text-5xl lg:text-5xl xl:text-6xl'>
             <motion.div variants={varianMotion(0.1)} initial='before' animate='after' className='animate-wiggle'>
@@ -63,7 +63,7 @@ export default function HeaderSection() {
             Based in <span className='font-bold text-blue-default-blue dark:text-yellow-400'>Jakarta</span>
           </motion.p>
           <motion.div variants={varianMotion(0.3)} initial='before' animate='after'>
-            <Link href='https://drive.google.com/file/d/1rkuoBdLaBgRSqUxd4_Gbl6f7YllaT4S5/view?usp=sharing'>
+            <Link href='https://drive.google.com/file/d/1kj7UYQyD-G58QjnaLYFxdf-7Bb_eZopK/view?usp=sharing'>
               <a target='_blank'>
                 <Button
                   className='bg-blue-default-blue dark:bg-yellow-400 dark:hover:bg-yellow-500'

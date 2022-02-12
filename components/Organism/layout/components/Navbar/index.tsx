@@ -60,46 +60,53 @@ export default function Navbar() {
 
   return (
     <nav className='sticky top-0 bg-white shadow-md dark:bg-gray-800 z-50'>
-      <div className='max-w-7xl mx-auto content-center items-center px-4'>
-        <div className='flex justify-between items-center'>
-          {/* Logo */}
-          <div>
-            <Link href='/'>
-              <a className='flex items-center py-3 px-2 text-gray-500'>
-                <img src='/icon/ihsan-logo.svg' alt='ihsan-logo' width='80%' className='fill-current text-green-600' />
-                {/* <span>Ihsan</span> */}
-              </a>
-            </Link>
-          </div>
-          {/* Primary Navbar */}
-          <div>
-            <ul className='md:flex items-center space-x-1 hidden'>
-              {navbars.map((navbar, idx) => (
-                <li key={idx}>
-                  <Link href={navbar.link}>
-                    <a className={pathname === navbar.link ? classLinkActive : classLink}>{navbar.name}</a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* Secondary Navbar */}
-          <div className='flex items-center'>
-            <MUISwitch defaultChecked={darkMode} onChange={darkModeHandler} />
-            <div className='md:hidden flex items-center'>
-              <IconButton color='primary' component='span' size='large' onClick={openNavbarHandler}>
-                {isOpenNavbar ? (
-                  <Close
-                    fontSize='large'
-                    className='text-blue-default-blue dark:text-yellow-400 dark:hover:text-yellow-600'
+      <div className='layout'>
+        <div className='max-w-7xl mx-auto content-center items-center'>
+          <div className='flex justify-between items-center'>
+            {/* Logo */}
+            <div>
+              <Link href='/'>
+                <a className='flex items-center py-3 px-2 text-gray-500'>
+                  <img
+                    src='/icon/ihsan-logo.svg'
+                    alt='ihsan-logo'
+                    width='80%'
+                    className='fill-current text-green-600'
                   />
-                ) : (
-                  <MenuRounded
-                    fontSize='large'
-                    className='text-blue-default-blue dark:text-yellow-400 dark:hover:text-yellow-600'
-                  />
-                )}
-              </IconButton>
+                  {/* <span>Ihsan</span> */}
+                </a>
+              </Link>
+            </div>
+            {/* Primary Navbar */}
+            <div>
+              <ul className='md:flex items-center space-x-1 hidden'>
+                {navbars.map((navbar, idx) => (
+                  <li key={idx}>
+                    <Link href={navbar.link}>
+                      <a className={pathname === navbar.link ? classLinkActive : classLink}>{navbar.name}</a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Secondary Navbar */}
+            <div className='flex items-center'>
+              <MUISwitch defaultChecked={darkMode} onChange={darkModeHandler} />
+              <div className='md:hidden flex items-center'>
+                <IconButton color='primary' component='span' size='large' onClick={openNavbarHandler}>
+                  {isOpenNavbar ? (
+                    <Close
+                      fontSize='large'
+                      className='text-blue-default-blue dark:text-yellow-400 dark:hover:text-yellow-600'
+                    />
+                  ) : (
+                    <MenuRounded
+                      fontSize='large'
+                      className='text-blue-default-blue dark:text-yellow-400 dark:hover:text-yellow-600'
+                    />
+                  )}
+                </IconButton>
+              </div>
             </div>
           </div>
         </div>
