@@ -6,6 +6,7 @@ import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { MUISwitch } from '../../../../Atoms/MUISwitch';
+import { FiMoon, FiSun } from 'react-icons/fi';
 
 const spring = {
   type: 'spring',
@@ -111,7 +112,13 @@ export default function Navbar() {
               </div>
               {/* Secondary Navbar */}
               <div className='flex items-center'>
-                <MUISwitch defaultChecked={darkMode} onChange={darkModeHandler} />
+                {/* <MUISwitch defaultChecked={darkMode} onChange={darkModeHandler} /> */}
+                <button
+                  className='p-2 hidden md:flex hover:text-blue-default-blue dark:hover:text-yellow-400 border-2 rounded-md hover:border-blue-default-blue dark:hover:border-yellow-400'
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                >
+                  {theme === 'light' ? <FiMoon size={20} /> : <FiSun size={20} />}
+                </button>
                 <div className='md:hidden flex items-center'>
                   <IconButton color='primary' component='span' size='large' onClick={openNavbarHandler}>
                     {isOpenNavbar ? (
@@ -141,6 +148,14 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            <li className='text-center py-4'>
+              <button
+                className='p-2 border-2 rounded-md text-blue-default-blue dark:text-yellow-400 border-blue-default-blue dark:border-yellow-400'
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              >
+                {theme === 'light' ? <FiMoon size={20} /> : <FiSun size={20} />}
+              </button>
+            </li>
           </ul>
         </div>
       </nav>
