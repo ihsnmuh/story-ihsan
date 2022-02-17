@@ -1,4 +1,5 @@
 import { GitHub, Instagram, LinkedIn, Mail } from '@mui/icons-material';
+import { BarRainbow } from 'components/Atoms/BarRainbow';
 import { getYearNow } from 'helpers/formatDate';
 import { SocialMedia } from '../../../../Atoms/socialMedia';
 

@@ -36,3 +36,33 @@ a {
 .card:focus {
   transform: scale(1.08);
 }
+
+/* Bar */
+@keyframes LoadingBarProgress {
+  0% {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: 125% 0;
+  }
+}
+
+@keyframes LoadingBarEnter {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+.bar-rainbow {
+  animation: 2s linear infinite LoadingBarProgress, 0.5s ease-out LoadingBarEnter;
+  background: #27c4f5 linear-gradient(to right, #27c4f5, #a307ba, #fd8d32, #58c322, #27c4f5);
+  background-size: 500%;
+  height: 5px;
+  transform-origin: left;
+  width: 100%;
+}
