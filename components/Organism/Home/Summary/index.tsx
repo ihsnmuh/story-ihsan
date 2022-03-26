@@ -10,10 +10,9 @@ export default function SummarySection() {
         <p className='lg:text-2xl text-left lg:text-center'>
           Hello! I'm Muhammad Ihsan, graduate of Agricultural Engineering, Bogor Agriculture University. I became a web
           developer, especially Frontend Developer, starting in June 2021. My current tech stacks are React, NextJs,
-          Tailwind and Typescrypt. I'm now currently working as a Frontend Developer in at PT. Digital Vision Publishing
-          and my last project was developing dashboard for a news website --{' '}
-          <Link href='https://www.matamatapolitik.com/'>
-            <a target='_blank'>matamatapolitik</a>
+          Tailwind and Typescrypt. I'm now currently working as a Junior Frontend Developer at{" "}
+          <Link href='https://femaledaily.com/'>
+            <a target='_blank'>Female Daily Network</a>
           </Link>
           . As a person, curiousity is important to improve my life better by learning something new.
         </p>
