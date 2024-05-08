@@ -6,7 +6,7 @@ const defaultMeta = {
   title: "Muhammad Ihsan's Portofolio",
   siteName: 'Muhammad Ihsan',
   description: 'Welcome to my personal website. I work with Javascript and React. I hope you like it!',
-  url: 'https://ihsanmuh.vercel.app',
+  url: process.env.NEXT_PUBLIC_ROOT_DOMAIN,
   image: 'https://iili.io/5Pjiga.jpg',
   type: 'website',
   robots: 'follow, index',
@@ -48,7 +48,7 @@ export default function Seo(props: SeoProps) {
       <meta name='image' property='og:image' content={meta.image} />
       {/* Twitter */}
       <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:site' content='@ihcaann' />
+      <meta name='twitter:site' content='@ihsnmuh' />
       <meta name='twitter:title' content={meta.title} />
       <meta name='twitter:description' content={meta.description} />
       <meta name='twitter:image' content={meta.image} />
