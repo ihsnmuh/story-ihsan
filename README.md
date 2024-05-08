@@ -1,8 +1,8 @@
 # Ihsanmuh
 
-![ihsanmuh.vecel.com](https://socialify.git.ci/ihsnmuh/story-ihsan/image?description=1&logo=https%3A%2F%2Fres.cloudinary.com%2Fdoc4dinqa%2Fimage%2Fupload%2Fv1638057323%2Fihsan%2FLogo_z2rxoq.svg&name=1&owner=1&pattern=Circuit%20Board&theme=Light)
+![ihsanmuh.my.id](https://socialify.git.ci/ihsnmuh/story-ihsan/image?description=1&logo=https%3A%2F%2Fres.cloudinary.com%2Fdoc4dinqa%2Fimage%2Fupload%2Fv1638057323%2Fihsan%2FLogo_z2rxoq.svg&name=1&owner=1&pattern=Circuit%20Board&theme=Light)
 
-[ihsanmuh.vercel.com](http://ihsanmuh.vercel.app/) is a personal website by Muhammad Ihsan, made using Next.js, TypeScript, Tailwind CSS, & MongoDB.
+[ihsanmuh.my.id](https://ihsanmuh.my.id/) is a personal website by Muhammad Ihsan, made using Next.js, TypeScript, Tailwind CSS, & MongoDB.
 
 ## Feature
 
