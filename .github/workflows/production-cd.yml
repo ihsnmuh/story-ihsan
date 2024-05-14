@@ -23,10 +23,9 @@ jobs:
         port: 22
         script: |
           cd /var/www/html/website/story-ihsan/
-          git fetch all
+          git fetch
           git checkout main
           git pull origin main
-          git status
-          npm install --only=prod
+          npm install
           npm run build
           pm2 restart ihsanmuh
