@@ -21,11 +21,11 @@ jobs:
         port: 22
         script: |
           cd /app/story-ihsan
+          node -v
           git fetch
           git checkout main
           git pull origin main
           fnm use 16
-          node -v
           npm install --legacy-peer-deps
           npm run build
           pm2 restart ihsanmuh
