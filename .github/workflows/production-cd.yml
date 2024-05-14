@@ -26,6 +26,7 @@ jobs:
           git fetch
           git checkout main
           git pull origin main
-          npm install
+          node -v
+          npm install --legacy-peer-deps
           npm run build
           pm2 restart ihsanmuh
