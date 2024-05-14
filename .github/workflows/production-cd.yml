@@ -20,7 +20,7 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: 22
         script: |
-          cd /var/www/html/website/story-ihsan/
+          cd /app/story-ihsan
           git fetch
           git checkout main
           git pull origin main
