@@ -28,13 +28,13 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: 22
         script: |
-          ls -la
-          cd /app/story-ihsan
-          node -v
+          whoami
+          cd /app/story-ihsan/
           git fetch
           git checkout main
           git pull origin main
           fnm use 16
+          node -v
           npm install --legacy-peer-deps
           npm run build
           pm2 restart ihsanmuh
