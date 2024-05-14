@@ -15,7 +15,6 @@ jobs:
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
       with:
-        node-version: 16.20.2
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.PRIVATE_KEY }}
@@ -25,6 +24,7 @@ jobs:
           git fetch
           git checkout main
           git pull origin main
+          fnm use 16
           node -v
           npm install --legacy-peer-deps
           npm run build
