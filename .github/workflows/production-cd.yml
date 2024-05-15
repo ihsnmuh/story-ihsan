@@ -29,6 +29,7 @@ jobs:
         port: 22
         script: |
           whoami
+          pwd
           cd /app/story-ihsan/
           git fetch
           git checkout main
