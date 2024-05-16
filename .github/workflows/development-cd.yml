@@ -27,7 +27,9 @@ jobs:
           git fetch
           git checkout development
           git pull origin development
-          fnm use 16
+          export NVM_DIR=~/.nvm
+          source ~/.nvm/nvm.sh
+          nvm use 16
           node -v
           npm install --legacy-peer-deps
           npm run build
